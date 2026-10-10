@@ -14,11 +14,11 @@
 @media(max-width:360px){.product-grid{gap:22px 9px}.product-name-row h3{font-size:11px}.product-consult{font-size:7px}.hero-bottomline{letter-spacing:0}.hero-actions{align-items:flex-start;flex-direction:column}}
 .contact-notice{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:99;background:#111;color:#fff;border-left:4px solid var(--acid);padding:15px 20px;max-width:calc(100% - 30px);font-size:12px;line-height:1.5;box-shadow:0 10px 40px #0003;transition:.25s}.contact-notice.show{opacity:1;transform:translate(-50%,0)}.image-missing{opacity:.2}
 
-[executed on device: monzonjona (ee87f056-125b-4ac1-a39f-f80618555ac9)]
 
-[executed on device: monzonjona (ee87f056-125b-4ac1-a39f-f80618555ac9)]
 
-[executed on device: monzonjona (ee87f056-125b-4ac1-a39f-f80618555ac9)]
+
+
+
 /* Hero editorial inspirado en el impacto tipográfico de Nomad Wear */
 .hero{grid-template-columns:1.18fr .82fr;min-height:680px;padding-top:60px;align-items:center}
 .hero-copy{padding:0 0 35px;min-width:0}
