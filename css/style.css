@@ -1,0 +1,588 @@
+@font-face{font-family:'Rage Italic';src:url('../fonts/RAGE_1.TTF') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+:root{--ink:#111;--paper:#f1f0eb;--white:#fff;--muted:#777;--line:#d8d7d0;--acid:#fff;--font-body:"DM Sans",Arial,sans-serif;--font-display:"Oswald",Impact,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}
+.shipping-bar{background:var(--acid);padding:9px 16px;text-align:center;font-size:10px;letter-spacing:.16em;font-weight:700}.shipping-bar i{font-style:normal;margin:0 9px}
+.site-header{height:78px;padding:0 5.5%;display:flex;align-items:center;justify-content:space-between;background:#111;color:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid #333}.brand{display:block;width:220px;max-width:48%}.brand img{display:block;width:100%;height:auto;max-height:52px;object-fit:contain}.brand-wordmark{font-family:"Rage Italic",cursive;font-size:clamp(27px,3.2vw,38px);font-weight:400;letter-spacing:-.035em;text-transform:none;white-space:nowrap;color:#fff;transform:rotate(-4deg);text-shadow:0 0 0 #fff;line-height:1.15}.brand-wordmark:hover{color:#ddd}.main-nav{display:flex;align-items:center;gap:30px;font-size:12px;font-weight:600}.main-nav>a:not(.nav-cta){color:#ccc;transition:color .2s}.main-nav>a:hover{color:var(--acid)}.nav-cta{padding:12px 16px;background:var(--acid);color:#111;font-weight:700}.menu-toggle{display:none;background:none;border:0;color:#fff}
+.hero{min-height:620px;background:#111;color:#fff;padding:76px 7% 0;display:grid;grid-template-columns:1.05fr .95fr;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:480px;height:480px;border:1px solid #272727;border-radius:50%;right:21%;top:5%;pointer-events:none}.hero-copy{z-index:2;padding:15px 0 72px}.eyebrow{font-size:10px;font-weight:700;letter-spacing:.18em;display:flex;align-items:center;gap:9px;margin:0 0 22px}.eyebrow-dot{width:7px;height:7px;background:var(--acid);border-radius:50%;display:inline-block}.hero h1,.store-copy h2,.shipping-section h2,.contact-section h2{font-family:var(--font-display);font-weight:600;letter-spacing:-.025em;line-height:.96;margin:0}.hero h1{font-size:clamp(60px,7.4vw,106px)}.hero h1 em,.store-copy h2 em,.shipping-section h2 em{font-style:normal;color:#bdbdbd}.hero-description{font-size:14px;line-height:1.8;color:#aaa;max-width:340px;margin:25px 0 28px}.hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.button{display:inline-flex;justify-content:center;align-items:center;gap:20px;padding:16px 19px;font-size:10px;font-weight:700;letter-spacing:.08em;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px)}.button-light{background:#fff;color:#111}.button-light:hover{background:var(--acid)}.button-dark{background:#111;color:#fff}.text-link{font-size:12px;color:#ddd}.hero-meta{display:flex;gap:32px;color:#777;font-size:9px;letter-spacing:.13em;margin-top:64px}.hero-visual{position:relative;min-height:470px;display:flex;align-items:center;justify-content:center}.hero-photo-wrap{height:430px;width:min(100%,380px);overflow:hidden;background:#282828;transform:rotate(2deg);border:1px solid #393939}.hero-photo{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.75)}.hero-stamp{position:absolute;right:-4%;bottom:65px;width:112px;height:112px;border-radius:50%;background:var(--acid);color:#111;display:flex;align-items:center;justify-content:center;gap:8px;transform:rotate(-12deg)}.hero-stamp>span{font-family:var(--font-display);font-size:40px;font-weight:700}.hero-stamp small{font-size:9px;font-weight:700;line-height:1.25}.hero-side-label{position:absolute;right:-4.5%;top:28%;writing-mode:vertical-rl;font-size:9px;letter-spacing:.18em;color:#777}.hero-bottomline{grid-column:1/-1;border-top:1px solid #353535;padding:19px 0;display:flex;align-items:center;justify-content:space-between;color:#aaa;font-size:9px;letter-spacing:.2em}.hero-bottomline b{color:var(--acid);font-size:16px}
+.section-pad{padding:100px 7%}.catalog-section{background:var(--paper)}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:25px}.dark-eyebrow{color:#555}.section-heading h2,.contact-section h2{font-family:var(--font-display);font-size:clamp(42px,5vw,66px);line-height:1;margin:0;letter-spacing:-.025em}.accent{color:#777}.section-note{font-size:12px;line-height:1.8;color:#666;margin:0 0 5px}.catalog-tools{display:flex;align-items:center;justify-content:space-between;gap:22px;margin:36px 0 20px}.filter-list{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid #ccc;background:transparent;padding:10px 14px;font-size:10px;color:#555;transition:.2s}.filter:hover,.filter.active{background:#111;color:#fff;border-color:#111}.search-box{display:flex;align-items:center;gap:9px;border-bottom:1px solid #999;padding:8px 0;min-width:190px}.search-box span{font-size:23px}.search-box input{border:0;outline:0;background:transparent;width:100%;font-size:11px}.product-count{display:flex;justify-content:space-between;padding:15px 0;border-top:1px solid var(--line);color:#777;font-size:9px;letter-spacing:.13em}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 17px}.product-card{min-width:0}.product-image-wrap{position:relative;aspect-ratio:4/5;background:#e2e0d9;overflow:hidden}.product-image{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s;mix-blend-mode:multiply}.product-card:hover .product-image{transform:scale(1.045)}.product-category{position:absolute;top:12px;left:12px;background:#f7f6f1;padding:7px 9px;font-size:8px;letter-spacing:.1em;text-transform:uppercase}.quick-view{position:absolute;right:11px;bottom:11px;width:35px;height:35px;border:0;border-radius:50%;background:var(--acid);font-size:18px}.product-info{padding:14px 1px 0}.product-name-row{display:flex;justify-content:space-between;gap:8px;align-items:start}.product-name-row h3{font-size:13px;line-height:1.4;margin:0;font-weight:700}.product-index{color:#999;font-size:9px}.product-sizes{font-size:10px;color:#777;margin:8px 0 13px;line-height:1.6}.product-consult{border:0;border-top:1px solid #c9c8c0;background:transparent;width:100%;display:flex;justify-content:space-between;padding:12px 0 0;text-align:left;font-size:9px;font-weight:700;letter-spacing:.06em}.product-consult span{font-size:14px}.empty-state{padding:40px;text-align:center;color:#666}
+
+.store-section{background:#111;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}.store-image{position:relative;min-height:420px;background:#262626}.store-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:saturate(.72)}.image-tag{position:absolute;left:16px;bottom:16px;background:var(--acid);color:#111;padding:11px 13px;font-size:9px;font-weight:700;letter-spacing:.12em}.store-copy{padding:20px 0}.store-copy h2,.shipping-section h2{font-size:clamp(48px,5.6vw,76px)}.store-copy>p:not(.eyebrow){max-width:380px;color:#aaa;font-size:13px;line-height:1.9;margin:25px 0}.store-address{display:flex;align-items:center;gap:13px;margin-top:35px;padding-top:24px;border-top:1px solid #333}.pin-icon{font-size:26px;color:var(--acid)}.store-address strong,.store-address small{display:block}.store-address strong{font-size:12px}.store-address small{color:#999;font-size:10px;margin-top:5px}
+.shipping-section{background:#f1f0eb;padding:54px 7%;display:grid;grid-template-columns:.6fr 1.3fr 1fr;align-items:center;gap:25px}.shipping-mark{font-family:"Rage Italic",cursive;font-weight:400;font-size:74px;letter-spacing:-.07em}.shipping-mark span{font-family:var(--font-body);font-size:12px;vertical-align:top;letter-spacing:0}.shipping-section .eyebrow{margin-bottom:13px}.shipping-section h2{font-size:clamp(36px,4.3vw,58px)}.shipping-section h2 em{color:#555}.shipping-copy{font-size:12px;line-height:1.9;margin:0;justify-self:end}
+.contact-section{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:#fff}.contact-section h2{font-size:clamp(48px,6vw,76px)}.contact-copy{font-size:13px;color:#666;margin-top:18px}.contact-actions{display:flex;align-items:flex-start;flex-direction:column;gap:17px}.contact-location{font-size:12px}.contact-hint{font-size:10px;color:#888;line-height:1.6;max-width:340px;margin:0}.site-footer{background:#111;color:#aaa;padding:24px 7%;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:9px;letter-spacing:.12em}.footer-brand{font-family:var(--font-display);font-size:20px;font-weight:700;color:#fff;letter-spacing:0}.footer-brand span{color:#aaa}.site-footer>a:last-child{color:var(--acid)}
+@media(max-width:1000px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.catalog-tools{align-items:flex-start;flex-direction:column}.search-box{width:100%;max-width:320px}.hero{padding-left:5%;padding-right:5%}.section-pad{padding:80px 5%}.hero-stamp{right:-2%}.hero-side-label{right:-2%}}
+@media(max-width:700px){.shipping-bar{font-size:8px;letter-spacing:.11em}.site-header{height:66px;padding:0 5%}.brand{width:160px}.menu-toggle{display:flex;flex-direction:column;gap:6px;padding:12px}.menu-toggle span{width:24px;height:2px;background:#fff}.main-nav{display:none;position:absolute;top:66px;left:0;right:0;background:#111;padding:20px 5% 25px;align-items:stretch;flex-direction:column;gap:20px;border-top:1px solid #333}.main-nav.open{display:flex}.nav-cta{text-align:center}.hero{display:flex;flex-direction:column;padding:45px 6% 0;min-height:auto}.hero-copy{padding:0 0 25px}.hero h1{font-size:clamp(58px,15vw,88px)}.hero-description{font-size:13px;max-width:290px;margin:20px 0 24px}.hero-actions{gap:17px}.button{padding:15px 13px;font-size:9px}.hero-meta{margin-top:38px;gap:15px;font-size:8px}.hero-visual{min-height:330px;margin:0 4% 18px}.hero-photo-wrap{height:310px;width:78%}.hero-stamp{width:85px;height:85px;right:0;bottom:40px}.hero-stamp>span{font-size:30px}.hero-stamp small{font-size:7px}.hero-side-label{right:-5%;top:20%;font-size:8px}.hero-bottomline{gap:9px;font-size:7px;letter-spacing:.08em;padding:15px 0}.hero-bottomline b{font-size:12px}.section-pad{padding:65px 5%}.section-heading{align-items:flex-start;flex-direction:column;gap:15px}.section-heading h2,.contact-section h2{font-size:49px}.catalog-tools{margin:26px 0 17px;gap:16px}.filter-list{gap:6px}.filter{padding:9px 10px;font-size:9px}.product-count{font-size:8px;gap:10px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 12px}.product-name-row h3{font-size:12px}.product-sizes{font-size:9px}.product-consult{font-size:8px}.store-section{grid-template-columns:1fr;gap:30px}.store-image{min-height:310px}.store-copy h2{font-size:60px}.shipping-section{grid-template-columns:1fr 2fr;gap:10px;padding:40px 5%}.shipping-mark{font-size:54px}.shipping-section h2{font-size:39px}.shipping-copy{grid-column:1/-1;justify-self:start;margin-top:15px}.contact-section{grid-template-columns:1fr;gap:28px}.site-footer{padding:24px 5%;flex-wrap:wrap}.site-footer>span{order:3;width:100%;line-height:1.7}.site-footer>a:last-child{font-size:8px}}
+@media(max-width:360px){.product-grid{gap:22px 9px}.product-name-row h3{font-size:11px}.product-consult{font-size:7px}.hero-bottomline{letter-spacing:0}.hero-actions{align-items:flex-start;flex-direction:column}}
+.contact-notice{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:99;background:#111;color:#fff;border-left:4px solid var(--acid);padding:15px 20px;max-width:calc(100% - 30px);font-size:12px;line-height:1.5;box-shadow:0 10px 40px #0003;transition:.25s}.contact-notice.show{opacity:1;transform:translate(-50%,0)}.image-missing{opacity:.2}
+
+[executed on device: monzonjona (ee87f056-125b-4ac1-a39f-f80618555ac9)]
+
+[executed on device: monzonjona (ee87f056-125b-4ac1-a39f-f80618555ac9)]
+
+[executed on device: monzonjona (ee87f056-125b-4ac1-a39f-f80618555ac9)]
+/* Hero editorial inspirado en el impacto tipográfico de Nomad Wear */
+.hero{grid-template-columns:1.18fr .82fr;min-height:680px;padding-top:60px;align-items:center}
+.hero-copy{padding:0 0 35px;min-width:0}
+.hero-brand-title{font-size:clamp(100px,13.3vw,190px)!important;line-height:.76!important;letter-spacing:-.075em!important;font-weight:700!important;text-transform:uppercase;position:relative;z-index:3;width:max-content;max-width:125%;}
+.hero-brand-title em{font-style:normal;color:#fff!important;display:inline-block;margin-left:.10em;letter-spacing:-.085em}
+.hero-description{position:relative;z-index:3;font-size:11px;letter-spacing:.09em;line-height:1.9;max-width:350px;margin:34px 0 24px;color:#c4c4c4}
+.hero-visual{min-width:0;margin-left:-15%;z-index:1}
+.hero-photo-wrap{width:min(100%,430px);height:500px;transform:rotate(0);border:0;background:#222;position:relative}
+.hero-photo-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1118 0%,transparent 48%),linear-gradient(0deg,#1117,transparent 35%);pointer-events:none}
+.hero-photo{filter:grayscale(100%) contrast(1.06);}
+.hero-stamp{background:#fff;color:#111}
+.hero-side-label{right:-1%;color:#aaa}
+.hero-bottomline{position:relative;z-index:2}
+@media(max-width:900px){.hero{grid-template-columns:1fr .7fr;min-height:600px;padding-top:45px}.hero-brand-title{font-size:clamp(80px,13vw,130px)!important}.hero-visual{margin-left:-25%}.hero-photo-wrap{height:420px}}
+@media(max-width:700px){.hero{display:flex;flex-direction:column;align-items:stretch;padding:42px 6% 0;min-height:auto}.hero-copy{padding:0 0 10px}.hero-brand-title{font-size:clamp(78px,17vw,124px)!important;max-width:100%;line-height:.8!important}.hero-brand-title em{margin-left:.04em}.hero-description{margin:26px 0 22px;font-size:10px}.hero-visual{margin:-6px 0 20px;min-height:290px}.hero-photo-wrap{height:310px;width:100%;max-width:none}.hero-stamp{right:2%;bottom:25px}.hero-side-label{right:-3%;top:14%}.hero-meta{margin-top:30px}}
+
+/* La tipografía RAGE que pasó Jona también se usa en el nombre principal del hero */
+.hero-brand-title{font-family:'Rage Italic','Yellowtail','Kaushan Script',cursive!important;font-weight:400!important;font-size:clamp(125px,17vw,245px)!important;letter-spacing:-.035em!important;line-height:.78!important;text-transform:none!important;width:max-content;max-width:130%;white-space:nowrap}
+.hero-brand-title em{font-family:inherit!important;font-style:normal!important;letter-spacing:-.025em!important;margin-left:.08em!important;display:inline-block}
+@media(max-width:900px){.hero-brand-title{font-size:clamp(105px,16vw,175px)!important}}
+@media(max-width:700px){.hero-brand-title{font-size:clamp(83px,19vw,145px)!important;line-height:.84!important;max-width:100%;white-space:normal}.hero-brand-title em{margin-left:.02em!important}}
+
+/* Usar el archivo original del logo en el hero: misma letra, trazos y proporciones */
+.hero-brand-title{width:130%;max-width:none;white-space:normal;margin:0 0 14px;line-height:1!important;letter-spacing:0!important}
+.hero-brand-title img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:left center}
+@media(max-width:900px){.hero-brand-title{width:145%}}
+@media(max-width:700px){.hero-brand-title{width:100%;max-width:100%;margin-bottom:14px}.hero-brand-title img{width:100%}}
+
+/* El hero usa exactamente el wordmark del encabezado, ampliado */
+.hero-brand-title.brand-wordmark{font-family:"Rage Italic",cursive!important;font-size:clamp(72px,10.5vw,150px)!important;font-weight:400!important;letter-spacing:-.035em!important;text-transform:none!important;white-space:nowrap;line-height:1.15!important;transform:rotate(-4deg);transform-origin:left center;text-shadow:0 0 0 #fff;color:#fff;width:max-content;max-width:none;margin:0 0 30px}
+@media(max-width:900px){.hero-brand-title.brand-wordmark{font-size:clamp(62px,9.5vw,105px)!important}}
+@media(max-width:700px){.hero-brand-title.brand-wordmark{font-size:clamp(52px,12vw,82px)!important;white-space:normal;max-width:100%;margin-bottom:22px}}
+
+/* Monograma SF con la misma fuente manuscrita de la marca */
+.hero-stamp span,.shipping-mark{font-family:'Rage Italic',cursive!important;font-weight:400!important;text-transform:none!important;letter-spacing:0!important}
+.hero-stamp span{font-size:54px;line-height:1.05;display:block;transform:rotate(-5deg)}
+.shipping-mark{font-size:88px!important;line-height:1!important;transform:rotate(-4deg)}
+.shipping-mark span{font-family:'DM Sans',sans-serif!important;font-size:14px!important;vertical-align:top;letter-spacing:0!important}
+
+/* Tarjetas de producto: fotografía protagonista, estilo editorial */
+.product-grid{gap:36px 18px}
+.product-card{cursor:default}
+.product-image-wrap{aspect-ratio:4/5;background:#e8e6e0;isolation:isolate}
+.product-image{object-fit:cover;mix-blend-mode:normal;transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s}
+.product-card:hover .product-image{transform:scale(1.035);filter:contrast(1.025)}
+.product-category{background:rgba(255,255,255,.92);color:#111;font-size:8px;letter-spacing:.12em;padding:8px 10px}
+.quick-view{width:auto;height:auto;min-width:42px;min-height:42px;border-radius:0;background:#fff;color:#111;opacity:0;transform:translateY(5px);transition:opacity .2s,transform .2s;font-size:20px}
+.product-card:hover .quick-view,.quick-view:focus-visible{opacity:1;transform:translateY(0)}
+.product-info{padding-top:15px}
+.product-name-row h3{font-size:13px;letter-spacing:.005em}
+.product-sizes{margin:7px 0 15px}
+.product-consult{border-top:1px solid #bdbbb3;padding-top:13px}
+.product-modal[hidden]{display:none!important}
+.product-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px}
+.product-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
+.product-modal-panel{position:relative;z-index:1;width:min(920px,100%);max-height:min(88vh,820px);overflow:auto;background:#f7f6f1;color:#111;display:grid;grid-template-columns:1.05fr .95fr;box-shadow:0 25px 90px #0005}
+.product-modal-close{position:absolute;z-index:3;top:12px;right:12px;width:42px;height:42px;border:0;background:#fff;color:#111;font-size:30px;line-height:1}
+.product-modal-gallery{padding:24px;background:#e8e6e0;min-width:0}
+.product-modal-main-image{display:block;width:100%;height:min(58vh,550px);object-fit:contain;background:#e8e6e0}
+.product-modal-thumbnails{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.product-modal-thumb{width:58px;height:68px;border:1px solid transparent;background:#f7f6f1;padding:2px;cursor:pointer}
+.product-modal-thumb.active{border-color:#111}
+.product-modal-thumb img{width:100%;height:100%;object-fit:cover}
+.product-modal-details{padding:64px 36px 36px;display:flex;align-items:flex-start;flex-direction:column}
+.product-modal-kicker{font-size:9px;letter-spacing:.16em;color:#777;margin:0 0 25px}
+.product-modal-details h2{font-family:var(--font-display);font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 12px;text-transform:uppercase}
+.product-modal-category{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#777;margin:0 0 28px}
+.product-modal-sizes{border-top:1px solid #d5d3cc;border-bottom:1px solid #d5d3cc;padding:17px 0;width:100%;font-size:12px;font-weight:600}
+.product-modal-note{font-size:12px;line-height:1.8;color:#666;margin:18px 0 30px}
+.product-modal-contact{margin-top:auto;width:100%;padding:16px;background:#111;color:#fff;border:1px solid #111;text-align:left;font-size:10px;font-weight:700;letter-spacing:.08em;display:flex;justify-content:space-between}
+body.modal-open{overflow:hidden}
+@media(max-width:700px){
+ .product-grid{gap:27px 11px}
+ .quick-view{opacity:1;transform:none;min-width:36px;min-height:36px;right:8px;bottom:8px}
+ .product-modal{padding:10px}
+ .product-modal-panel{grid-template-columns:1fr;max-height:94vh}
+ .product-modal-gallery{padding:12px}
+ .product-modal-main-image{height:40vh;min-height:230px}
+ .product-modal-details{padding:25px 22px 22px}
+ .product-modal-kicker{margin-bottom:14px}
+ .product-modal-details h2{font-size:32px;padding-right:30px}
+ .product-modal-category{margin-bottom:12px}
+ .product-modal-note{margin:14px 0 20px}
+}
+
+/* Marco fotográfico editorial + movimiento suave al mouse o al tacto */
+.product-image-wrap{padding:10px;background:#f8f7f3;border:1px solid #d5d2c9;overflow:hidden;perspective:900px;transition:border-color .3s,box-shadow .35s,transform .35s}
+.product-image-wrap::before{content:"";position:absolute;inset:5px;border:1px solid rgba(17,17,17,.12);z-index:1;pointer-events:none;transition:inset .35s,border-color .35s}
+.product-image{position:relative;z-index:0;width:100%;height:100%;object-fit:cover;transform:scale(1);transform-origin:center;transition:transform .65s cubic-bezier(.2,.75,.25,1),filter .45s;will-change:transform}
+.product-card:hover .product-image-wrap{border-color:#aaa69b;box-shadow:0 14px 30px rgba(17,17,17,.10);transform:translateY(-3px)}
+.product-card:hover .product-image-wrap::before{inset:8px;border-color:rgba(17,17,17,.22)}
+.product-card:hover .product-image{transform:scale(1.075);filter:contrast(1.04)}
+.product-card:active .product-image{transform:scale(1.11)}
+.product-image-wrap:has(.product-image:focus-visible){outline:2px solid #111;outline-offset:3px}
+@media(hover:none){.product-card:active .product-image-wrap{box-shadow:0 10px 24px rgba(17,17,17,.12)}.product-card:active .product-image{transform:scale(1.07)}}
+@media(prefers-reduced-motion:reduce){.product-image-wrap,.product-image,.product-image-wrap::before{transition:none!important}.product-card:hover .product-image-wrap{transform:none}}
+
+/* Detalle de cinta adhesiva: fotos impresas y pegadas al catálogo */
+.product-image-wrap{position:relative!important;overflow:visible!important;background:#f8f7f3!important;border:1px solid #e1ded5!important;padding:9px!important;box-shadow:0 5px 12px rgba(20,18,15,.07);transform:rotate(-.35deg);transition:transform .35s ease,box-shadow .35s ease!important}
+.product-card:nth-child(even) .product-image-wrap{transform:rotate(.45deg)}
+.product-image-wrap::after{content:"";position:absolute;z-index:4;top:-7px;left:calc(50% - 29px);width:58px;height:17px;background:rgba(218,207,169,.68);border-left:1px solid rgba(255,255,255,.45);border-right:1px solid rgba(130,115,80,.12);box-shadow:0 1px 2px rgba(0,0,0,.08);transform:rotate(-4deg);pointer-events:none}
+.product-card:nth-child(3n) .product-image-wrap::after{left:auto;right:13px;top:-6px;transform:rotate(7deg);background:rgba(226,222,207,.76)}
+.product-image-wrap::before{inset:5px!important;border-color:rgba(17,17,17,.08)!important}
+.product-card:hover .product-image-wrap{transform:translateY(-5px) rotate(0deg)!important;box-shadow:0 16px 25px rgba(17,17,17,.14)!important}
+.product-card:hover .product-image-wrap::after{transform:translateY(-2px) rotate(-7deg)}
+.product-card:nth-child(3n):hover .product-image-wrap::after{transform:translateY(-2px) rotate(10deg)}
+.product-card .product-image{transform-origin:center;}
+@media(hover:none){.product-card:active .product-image-wrap{transform:translateY(-2px) rotate(0deg)!important}}
+
+/* Marco de foto instantánea tipo Instax/Polaroid, con cinta arriba */
+.product-image-wrap{box-sizing:border-box!important;aspect-ratio:4/5!important;height:auto!important;padding:9px 9px 42px!important;background:#fffefb!important;border:1px solid #e7e3da!important;box-shadow:2px 5px 12px rgba(25,22,18,.13)!important;overflow:visible!important;position:relative!important;transform:rotate(-.6deg);}
+.product-card:nth-child(even) .product-image-wrap{transform:rotate(.7deg)}
+.product-image-wrap .product-image{display:block!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;background:#e8e6e0}
+.product-image-wrap::before{content:"";position:absolute;z-index:2;inset:5px 5px 38px!important;border:1px solid rgba(0,0,0,.035)!important;pointer-events:none}
+.product-image-wrap::after{content:"";position:absolute;z-index:5;top:-8px;left:calc(50% - 30px);width:60px;height:19px;background:rgba(222,211,177,.76);border:1px solid rgba(150,135,95,.12);box-shadow:0 1px 2px rgba(0,0,0,.08);transform:rotate(-4deg);pointer-events:none}
+.product-card:nth-child(3n) .product-image-wrap::after{left:auto;right:12px;transform:rotate(6deg);background:rgba(232,228,214,.82)}
+.product-card:hover .product-image-wrap{transform:translateY(-5px) rotate(0deg)!important;box-shadow:3px 13px 22px rgba(25,22,18,.17)!important}
+.product-card:hover .product-image-wrap .product-image{transform:scale(1.035)!important}
+.product-card:hover .product-image-wrap::after{transform:translateY(-2px) rotate(-7deg)}
+.product-card:nth-child(3n):hover .product-image-wrap::after{transform:translateY(-2px) rotate(9deg)}
+@media(max-width:700px){.product-image-wrap{padding:6px 6px 30px!important}.product-image-wrap::before{inset:4px 4px 27px!important}.product-image-wrap::after{width:48px;height:16px;left:calc(50% - 24px);top:-6px}.product-card:hover .product-image-wrap{transform:translateY(-2px) rotate(0deg)!important}}
+
+/* Carrusel de fotos dentro de la ficha del producto */
+.product-modal-carousel{position:relative;width:100%;touch-action:pan-y;overflow:hidden;background:#e8e6e0}
+.product-modal-main-image{user-select:none;-webkit-user-drag:none;transition:opacity .18s ease}
+.product-modal-arrow{position:absolute;z-index:3;top:50%;transform:translateY(-50%);width:38px;height:48px;border:0;background:rgba(255,255,255,.9);color:#111;font-size:32px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.product-modal-prev{left:8px}.product-modal-next{right:8px}
+.product-modal-arrow[hidden]{display:none!important}
+.product-modal-counter{position:absolute;z-index:2;right:10px;bottom:10px;background:rgba(255,255,255,.92);padding:6px 9px;font-size:10px;letter-spacing:.08em;color:#111}
+.product-modal-thumb{opacity:.62;transition:opacity .2s,border-color .2s}.product-modal-thumb.active{opacity:1}
+@media(max-width:700px){.product-modal-arrow{width:34px;height:42px;font-size:28px}.product-modal-counter{right:7px;bottom:7px}}
+
+/* La siguiente y anterior se asoman detrás, como carrusel de tienda */
+.product-modal-carousel{position:relative;isolation:isolate;overflow:hidden;background:#dcdad4}
+.product-modal-carousel .product-modal-main-image{position:relative;z-index:2;width:78%!important;height:min(58vh,550px)!important;margin:0 auto;object-fit:contain;display:block;box-shadow:0 4px 18px rgba(0,0,0,.10)}
+.product-modal-peek{position:absolute;z-index:1;top:0;width:27%;height:min(58vh,550px);object-fit:cover;opacity:.78;filter:saturate(.8);transition:opacity .25s;pointer-events:none}
+.product-modal-peek-prev{left:-8%}.product-modal-peek-next{right:-8%}
+.product-modal-peek[hidden]{display:none!important}
+.product-modal-arrow{z-index:4;top:50%;}
+.product-modal-counter{z-index:5}
+@media(max-width:700px){.product-modal-carousel .product-modal-main-image{width:78%!important;height:40vh!important;min-height:230px}.product-modal-peek{height:40vh;min-height:230px}.product-modal-peek-prev{left:-8%}.product-modal-peek-next{right:-8%}}
+
+/* Carrusel enmarcado: conserva el look Polaroid también en las fotos laterales */
+.product-modal-carousel{display:flex;align-items:stretch;justify-content:center;min-height:clamp(300px,58vh,550px);background:#dedcd6;overflow:hidden;position:relative}
+.product-modal-main-frame{position:relative;z-index:2;flex:0 0 78%;width:78%;height:clamp(300px,58vh,550px);box-sizing:border-box;padding:9px 9px 38px;background:#fffefb;border:1px solid #e7e3da;box-shadow:0 4px 18px rgba(0,0,0,.12)}
+.product-modal-main-frame::after,.product-modal-peek-frame::after{content:"";position:absolute;z-index:4;top:-5px;left:calc(50% - 25px);width:50px;height:16px;background:rgba(222,211,177,.78);border:1px solid rgba(150,135,95,.12);box-shadow:0 1px 2px rgba(0,0,0,.08);transform:rotate(-4deg);pointer-events:none}
+.product-modal-main-frame .product-modal-main-image{width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;margin:0;object-fit:contain;background:#e8e6e0;box-shadow:none;display:block}
+.product-modal-peek-frame{position:absolute;z-index:1;top:0;width:29%;height:clamp(300px,58vh,550px);box-sizing:border-box;padding:7px 7px 27px;background:#fffefb;border:1px solid #e7e3da;box-shadow:0 3px 12px rgba(0,0,0,.12);opacity:.92;pointer-events:none;overflow:visible}
+.product-modal-peek-frame-prev{left:-8%;transform:rotate(-3deg)}
+.product-modal-peek-frame-next{right:-8%;transform:rotate(3deg)}
+.product-modal-peek-frame img{display:block;width:100%;height:100%;object-fit:cover;background:#e8e6e0}
+.product-modal-peek-frame:has(img[hidden]){display:none!important}
+.product-modal-main-frame:has(img[hidden]){display:none}
+.product-modal-main-frame::after{top:-5px}
+@media(max-width:700px){
+ .product-modal-carousel{min-height:40vh}
+ .product-modal-main-frame{flex-basis:78%;width:78%;height:40vh;min-height:230px;padding:6px 6px 28px}
+ .product-modal-peek-frame{height:40vh;min-height:230px;padding:5px 5px 21px;width:29%}
+ .product-modal-peek-frame-prev{left:-8%}.product-modal-peek-frame-next{right:-8%}
+ .product-modal-main-frame::after,.product-modal-peek-frame::after{width:42px;height:13px;left:calc(50% - 21px);top:-5px}
+}
+
+/* Ajuste definitivo de capas del carrusel enmarcado */
+.product-modal-carousel{display:flex!important;align-items:stretch!important;justify-content:center!important;position:relative!important;overflow:hidden!important}
+.product-modal-carousel .product-modal-main-frame{position:relative!important;z-index:2!important;flex:0 0 78%!important;width:78%!important;margin:0!important}
+.product-modal-carousel .product-modal-peek-frame{position:absolute!important;top:0!important;z-index:1!important;display:block!important;box-sizing:border-box!important}
+.product-modal-carousel .product-modal-peek-frame-prev{left:-8%!important;right:auto!important}
+.product-modal-carousel .product-modal-peek-frame-next{right:-8%!important;left:auto!important}
+.product-modal-carousel .product-modal-peek{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;opacity:1!important;filter:none!important}
+.product-modal-carousel .product-modal-peek[hidden]{display:none!important}
+.product-modal-carousel .product-modal-peek-frame:has(.product-modal-peek[hidden]){display:none!important}
+
+
+/* Ficha Stilo Facha: panel oscuro y transparente, sin marco blanco tipo Polaroid */
+.product-modal{padding:0!important;background:rgba(0,0,0,.88)}
+.product-modal-backdrop{background:rgba(0,0,0,.88)!important;backdrop-filter:blur(8px)!important}
+.product-modal-panel{
+ width:min(1500px,100%)!important;max-width:100%!important;max-height:100vh!important;height:100vh!important;
+ overflow:auto!important;background:transparent!important;color:#f7f7f7!important;
+ grid-template-columns:minmax(0,1.25fr) minmax(360px,.75fr)!important;
+ gap:clamp(28px,5vw,76px)!important;padding:clamp(28px,4vw,64px)!important;
+ box-shadow:none!important;align-items:center!important
+}
+.product-modal-close{position:fixed!important;top:24px!important;right:28px!important;background:transparent!important;color:#fff!important;font-size:36px!important;font-weight:300!important}
+.product-modal-gallery{padding:0!important;background:transparent!important;min-width:0!important}
+.product-modal-carousel{
+ min-height:0!important;height:min(66vh,620px)!important;background:transparent!important;overflow:hidden!important;
+}
+.product-modal-main-frame{
+ height:100%!important;flex-basis:58%!important;width:58%!important;padding:0!important;
+ background:transparent!important;border:0!important;box-shadow:none!important;overflow:hidden!important
+}
+.product-modal-main-frame::after,.product-modal-peek-frame::after{display:none!important;content:none!important}
+.product-modal-main-frame .product-modal-main-image{
+ height:100%!important;width:100%!important;object-fit:contain!important;background:transparent!important;
+}
+.product-modal-peek-frame{
+ height:82%!important;top:9%!important;width:30%!important;padding:0!important;
+ background:transparent!important;border:0!important;box-shadow:none!important;opacity:.72!important;overflow:hidden!important
+}
+.product-modal-peek-frame-prev{left:-4%!important;transform:perspective(900px) rotateY(9deg)!important}
+.product-modal-peek-frame-next{right:-4%!important;transform:perspective(900px) rotateY(-9deg)!important}
+.product-modal-carousel .product-modal-peek{background:transparent!important;object-fit:cover!important}
+.product-modal-arrow{
+ width:46px!important;height:54px!important;border:1px solid #ffffff30!important;border-radius:50%!important;
+ background:#090909b8!important;color:#fff!important;font-size:34px!important
+}
+.product-modal-prev{left:8px!important}.product-modal-next{right:8px!important}
+.product-modal-counter{right:12%!important;bottom:12px!important;background:#111b!important;color:#fff!important;border-radius:20px!important}
+.product-modal-thumbnails{justify-content:center!important;gap:10px!important;margin-top:18px!important}
+.product-modal-thumb{width:clamp(48px,7vw,100px)!important;height:clamp(58px,8vw,112px)!important;padding:0!important;background:transparent!important;border:1px solid #ffffff18!important;opacity:.55!important}
+.product-modal-thumb.active{border:2px solid #fff!important;opacity:1!important}
+.product-modal-thumb img{display:block!important}
+.product-modal-details{padding:0!important;min-width:0!important;background:transparent!important;color:#f7f7f7!important;justify-content:center!important}
+/* Texto del detalle en naranja rojizo, con contraste alto sobre negro */
+.product-modal-kicker{color:#d92d22!important;margin-bottom:22px!important;font-size:11px!important;font-weight:700!important}
+.product-modal-details h2{color:#d92d22!important;text-transform:none!important;font-family:var(--font-body,Arial,sans-serif)!important;font-size:clamp(26px,2.6vw,38px)!important;letter-spacing:-.025em!important;font-weight:700!important;line-height:1.1!important}
+.product-modal-category{color:#d92d22!important;font-size:15px!important;text-transform:none!important;margin-bottom:28px!important;font-weight:600!important}
+.product-modal-sizes{border-top:1px solid #d92d2266!important;border-bottom:0!important;padding:22px 0 0!important;color:#f05a4e!important;font-size:16px!important;font-weight:600!important}
+.product-modal-note{color:#f5a098!important;font-size:15px!important;line-height:1.55!important;margin:22px 0 34px!important}
+.product-modal-contact{margin-top:0!important;padding:20px!important;width:100%!important;background:#d92d22!important;color:#fff!important;border:1px solid #d92d22!important;font-size:14px!important;font-weight:700!important;letter-spacing:.02em!important;justify-content:center!important;gap:18px!important;text-align:center!important}
+.product-modal-contact:hover{background:#d92d22!important;color:#111!important}
+@media(max-width:700px){
+ .product-modal{padding:0!important}
+ .product-modal-panel{height:100dvh!important;max-height:100dvh!important;overflow-y:auto!important;grid-template-columns:minmax(0,1fr)!important;gap:22px!important;padding:62px 18px 24px!important;align-content:start!important}
+ .product-modal-close{top:10px!important;right:12px!important}
+ .product-modal-carousel{height:38vh!important;min-height:245px!important}
+ .product-modal-main-frame{height:100%!important;flex-basis:62%!important;width:62%!important}
+ .product-modal-peek-frame{height:78%!important;top:11%!important;width:30%!important}
+ .product-modal-thumbnails{margin-top:12px!important;gap:7px!important}
+ .product-modal-thumb{width:48px!important;height:58px!important}
+ .product-modal-details{padding:4px 2px 10px!important}
+ .product-modal-kicker{margin-bottom:12px!important}
+ .product-modal-details h2{font-size:27px!important}
+ .product-modal-category{margin-bottom:12px!important}
+ .product-modal-sizes{padding-top:14px!important}
+ .product-modal-note{margin:12px 0 18px!important}
+ .product-modal-contact{padding:16px!important}
+}
+
+
+/* Marca de agua Stilo Facha detrás de las prendas del visor */
+.product-modal-carousel::before{
+ content:"";
+ position:absolute;
+ z-index:0;
+ inset:0;
+ background-image:url("../logo.png");
+ background-repeat:no-repeat;
+ background-position:center;
+ background-size:min(58%, 420px) auto;
+ opacity:.14;
+ pointer-events:none;
+}
+.product-modal-carousel .product-modal-main-frame,
+.product-modal-carousel .product-modal-peek-frame{z-index:1!important}
+.product-modal-carousel .product-modal-main-frame{z-index:2!important}
+@media(max-width:700px){
+ .product-modal-carousel::before{background-size:min(68%, 300px) auto;opacity:.13}
+}
+
+
+/* Corrección: mostrar marca de agua encima del fondo y detrás de las fotos */
+.product-modal-carousel{isolation:isolate!important;position:relative!important;background:#090909!important}
+.product-modal-carousel::before{
+ content:"STILO FACHA"!important;
+ position:absolute!important;
+ z-index:0!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ inset:0!important;
+ color:rgba(255,255,255,.12)!important;
+ font-family:'Rage Italic',cursive!important;
+ font-size:clamp(46px,8vw,118px)!important;
+ font-style:italic!important;white-space:nowrap!important;
+ letter-spacing:-.06em!important;
+ background-image:none!important;
+ pointer-events:none!important;
+}
+.product-modal-carousel .product-modal-peek-frame{z-index:1!important;background:transparent!important}
+.product-modal-carousel .product-modal-main-frame{z-index:2!important;background:transparent!important}
+.product-modal-carousel .product-modal-main-frame .product-modal-main-image{background:transparent!important}
+@media(max-width:700px){
+ .product-modal-carousel::before{font-size:clamp(38px,10vw,68px)!important;white-space:normal!important;text-align:center!important}
+}
+
+
+/* Wordmark gigante de fondo: cubre todo el visor al 50% de opacidad */
+.product-modal-carousel::before{
+ content:"STILO FACHA"!important;
+ position:absolute!important;z-index:1!important;
+ inset:0!important;display:flex!important;align-items:center!important;justify-content:center!important;
+ width:100%!important;height:100%!important;
+ color:rgba(255,255,255,.5)!important;
+ font-family:'Rage Italic',cursive!important;
+ font-size:clamp(64px,14vw,220px)!important;
+ line-height:.9!important;letter-spacing:-.07em!important;font-style:italic!important;
+ white-space:nowrap!important;text-align:center!important;
+ pointer-events:none!important;overflow:visible!important;
+}
+.product-modal-carousel .product-modal-peek-frame{z-index:2!important}
+.product-modal-carousel .product-modal-main-frame{z-index:3!important}
+@media(max-width:700px){
+ .product-modal-carousel::before{font-size:clamp(48px,15vw,110px)!important;white-space:normal!important;padding:0 5%!important;box-sizing:border-box!important}
+}
+
+
+/* Marca manuscrita gigante: ocupa toda la ventana negra detrás del producto */
+.product-modal-backdrop{
+ position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;
+ overflow:hidden!important;background:rgba(0,0,0,.94)!important;
+}
+.product-modal-backdrop::before{
+ content:"Stilo Facha"!important;
+ position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ color:rgba(255,255,255,.5)!important;
+ font-family:'Rage Italic',cursive!important;
+ font-size:clamp(100px,28vw,560px)!important;
+ font-style:normal!important;letter-spacing:-.055em!important;
+ line-height:1!important;white-space:nowrap!important;
+ transform:rotate(-5deg)!important;
+ pointer-events:none!important;user-select:none!important;
+}
+@media(max-width:700px){
+ .product-modal-backdrop::before{
+  font-size:clamp(82px,24vw,190px)!important;
+  white-space:normal!important;text-align:center!important;padding:0 3%!important;
+ }
+}
+
+/* Panel negro semitransparente para que la ficha se lea sobre cualquier foto */
+.product-modal-details{
+ background:rgba(0,0,0,.80)!important;
+ padding:clamp(22px,3vw,42px)!important;
+ border:1px solid rgba(255,104,72,.24)!important;
+ box-shadow:0 16px 50px rgba(0,0,0,.24)!important;
+ backdrop-filter:blur(5px)!important;
+ -webkit-backdrop-filter:blur(5px)!important;
+}
+@media(max-width:700px){
+ .product-modal-details{padding:22px 18px!important;margin-top:2px!important}
+}
+
+/* Carrito Stilo Facha inspirado en VANTA, adaptado a catálogo sin precios visibles */
+.cart-toggle{display:inline-flex;align-items:center;gap:10px;flex-shrink:0;background:#d92d22;color:#fff;border:1px solid #d92d22;padding:12px 15px;font-size:10px;font-weight:800;letter-spacing:.08em;cursor:pointer;transition:background .2s,color .2s}
+.cart-toggle:hover{background:#d92d22;color:#111}
+#cartCount{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 5px;background:#111;color:#fff;border:1px solid #ffffff55;border-radius:50%;font-size:10px}
+.cart-overlay{position:fixed;inset:0;z-index:1100;background:rgba(0,0,0,.7);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;backdrop-filter:blur(3px)}
+.cart-overlay.open{opacity:1;visibility:visible}
+.cart-panel{position:fixed;z-index:1101;top:0;right:0;width:min(440px,100%);height:100dvh;padding:28px;background:#101010;color:#f7f7f7;border-left:1px solid #ffffff20;display:flex;flex-direction:column;transform:translateX(105%);transition:transform .3s ease;box-shadow:-20px 0 70px #0005}
+.cart-panel.open{transform:translateX(0)}
+.cart-header{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:22px;border-bottom:1px solid #ffffff25}
+.cart-header .eyebrow{color:#d92d22;font-size:10px;margin-bottom:10px}
+.cart-header h2{font-size:30px;letter-spacing:-.04em;margin:0;color:#fff}
+#cartCountPanel{color:#d92d22;font-size:18px}
+.close-cart{width:42px;height:42px;border:1px solid #ffffff35;background:transparent;color:#fff;font-size:28px;cursor:pointer}
+.cart-items{flex:1;overflow-y:auto;padding:12px 0}
+.cart-item{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:12px;align-items:center;padding:18px 0;border-bottom:1px solid #ffffff1c}
+.cart-item-photo{width:64px;height:78px;object-fit:cover;background:#1b1b1b;border:1px solid #ffffff20}
+.cart-item-info h3{font-size:15px;color:#fff;margin:0 0 6px}
+.cart-item-info p{font-size:11px;line-height:1.6;color:#f5a098;margin:0}
+.cart-quantity{display:flex;align-items:center;gap:12px;margin-top:12px}
+.cart-quantity button{width:28px;height:28px;background:#1c1c1c;border:1px solid #ffffff35;color:#fff;font-size:17px;cursor:pointer}
+.cart-quantity span{min-width:14px;text-align:center;font-size:13px}
+.cart-remove{border:0;background:transparent;color:#f05a4e;font-size:11px;text-decoration:underline;cursor:pointer}
+.cart-empty{padding:30px 0;color:#aaa;font-size:13px;line-height:1.7}
+.cart-footer{padding-top:18px;border-top:1px solid #ffffff25}
+.cart-note{color:#aaa;font-size:11px;line-height:1.6;margin:0 0 15px}
+.checkout{width:100%;padding:17px 14px;background:#d92d22;color:#fff;border:1px solid #d92d22;font-size:11px;font-weight:800;letter-spacing:.04em;cursor:pointer;transition:background .2s,color .2s}
+.checkout:hover{background:#d92d22;color:#111}
+@media(max-width:700px){.site-header{gap:10px}.cart-toggle{padding:10px 9px;gap:6px;font-size:9px}.cart-panel{padding:22px 18px}.cart-header h2{font-size:27px}}
+.product-consult{justify-content:center!important;align-items:center!important;gap:8px!important;background:#d92d22!important;color:#fff!important;border:1px solid #d92d22!important;padding:13px 10px!important;text-align:center!important;font-size:9px!important;letter-spacing:.045em!important;transition:background .2s,color .2s,transform .2s!important}
+.product-consult:hover{background:#d92d22!important;color:#111!important;transform:translateY(-2px)!important}
+
+/* Código interno discreto para identificar cada remera */
+.product-index.product-code{font-size:9px!important;font-weight:500!important;letter-spacing:.12em!important;color:#888!important;white-space:nowrap!important}
+.product-modal-code{margin:4px 0 16px!important;color:#999!important;font-size:10px!important;letter-spacing:.16em!important;font-weight:500!important}
+.product-modal-code[hidden]{display:none!important}
+
+/* Tema negro integral para toda la página Stilo Facha */
+:root{--ink:#f5f5f5;--paper:#080808;--white:#111;--muted:#aaa;--line:#292929;--acid:#d92d22}
+html,body,main{background:#080808!important;color:#f5f5f5!important}
+.shipping-bar{background:#080808!important;color:#f5f5f5!important;border-bottom:1px solid #252525!important}
+.site-header,.hero,.store-section,.site-footer{background:#080808!important}
+.catalog-section,.contact-section,.shipping-section{background:#080808!important;color:#f5f5f5!important}
+.section-heading h2,.contact-section h2,.product-name-row h3,.product-count,#resultCount{color:#f5f5f5!important}
+.dark-eyebrow,.section-note,.contact-copy,.contact-hint,.product-sizes{color:#aaa!important}
+.accent{color:#d92d22!important}
+.filter{background:#111!important;border-color:#444!important;color:#ddd!important}
+.filter:hover,.filter.active{background:#d92d22!important;color:#fff!important;border-color:#d92d22!important}
+.search-box{border-bottom-color:#555!important;color:#f5f5f5!important}
+.search-box input{color:#f5f5f5!important}
+.search-box input::placeholder{color:#888!important}
+.product-count{border-top-color:#333!important}
+.product-image-wrap{background:#111!important}
+.product-image{mix-blend-mode:normal!important}
+.product-category{background:rgba(8,8,8,.88)!important;color:#fff!important;border:1px solid #ffffff22!important}
+.product-consult{background:#d92d22!important;color:#fff!important;border-color:#d92d22!important}
+.product-consult:hover{background:#d92d22!important;color:#080808!important}
+.product-index{color:#888!important}
+.product-sizes{color:#aaa!important}
+.shipping-section{border-top:1px solid #292929!important;border-bottom:1px solid #292929!important}
+.shipping-section h2 em,.hero h1 em,.store-copy h2 em{color:#d92d22!important}
+.shipping-copy{color:#ccc!important}
+.shipping-mark{color:#f5f5f5!important}
+.contact-location{color:#ddd!important}
+.contact-section .button-dark{background:#d92d22!important;color:#fff!important;border-color:#d92d22!important}
+.contact-section .button-dark:hover{background:#d92d22!important;color:#080808!important}
+.empty-state{color:#aaa!important}
+@media(max-width:700px){.catalog-section,.contact-section,.shipping-section{background:#080808!important}}
+
+
+
+/* Carrusel editorial de looks entre el hero y el catálogo */
+.looks-section{background:#080808;color:#f5f5f5;padding:34px 7% 42px;border-bottom:1px solid #252525;overflow:hidden}
+.looks-heading,.looks-footer{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.looks-heading .eyebrow{margin:0;color:#ddd}
+.looks-counter{font-size:10px;letter-spacing:.16em;color:#d92d22;font-weight:700}
+.looks-carousel{position:relative;margin-top:22px;overflow:hidden;background:#080808}
+.looks-track{display:flex;transition:transform 1.1s cubic-bezier(.22,.75,.25,1);will-change:transform}
+.look-slide{flex:0 0 100%;width:100%;height:clamp(260px,48vw,590px);display:flex;align-items:center;justify-content:center;background:#000}
+.look-slide img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#000}
+.looks-arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:1px solid #ffffff55;background:#080808bb;color:#fff;font-size:30px;line-height:1;display:grid;place-items:center;transition:background .2s,border-color .2s}
+.looks-arrow:hover{background:#d92d22;border-color:#d92d22}
+.looks-prev{left:14px}.looks-next{right:14px}
+.looks-footer{padding-top:17px;color:#888;font-size:9px;letter-spacing:.14em}
+.looks-dots{display:flex;align-items:center;gap:7px}
+.looks-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#555;transition:background .2s,transform .2s}
+.looks-dots button.active{background:#d92d22;transform:scale(1.35)}
+@media(max-width:700px){.looks-section{padding:26px 5% 30px}.looks-carousel{margin-top:17px}.look-slide{height:clamp(260px,105vw,460px)}.look-slide img{object-fit:contain}.looks-arrow{width:34px;height:34px;font-size:25px}.looks-prev{left:8px}.looks-next{right:8px}.looks-footer{font-size:8px;letter-spacing:.08em}}
+@media(prefers-reduced-motion:reduce){.looks-track,.looks-arrow,.looks-dots button{transition:none}}
+
+/* Iconos de Instagram y WhatsApp en el encabezado */
+.header-socials{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.header-social-link{width:36px;height:36px;display:grid;place-items:center;color:#f5f5f5;border:1px solid #ffffff30;background:#111;transition:color .2s,border-color .2s,background .2s}
+.header-social-link svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.header-social-link svg .social-dot{fill:currentColor;stroke:none}
+.header-social-link:hover{color:#fff;background:#d92d22;border-color:#d92d22}
+@media(max-width:1000px){.site-header{gap:12px}.main-nav{gap:16px}.header-socials{gap:7px}.header-social-link{width:32px;height:32px}}
+
+/* LOOKS: carrusel compacto a la izquierda + mensaje editorial a la derecha */
+.looks-section{padding:52px 7% 34px!important}
+.looks-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.88fr);align-items:center;gap:clamp(28px,6vw,92px);max-width:1400px;margin:0 auto}
+.looks-carousel{width:100%;min-width:0;height:clamp(330px,39vw,500px);margin:0!important;overflow:hidden;background:#111;position:relative}
+.looks-track{height:100%;display:flex;transition:transform 1.1s cubic-bezier(.22,.75,.25,1);will-change:transform}
+.look-slide{flex:0 0 100%;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#111;overflow:hidden}
+.look-slide img{width:100%;height:100%;object-fit:contain;object-position:center;background:#111;display:block}
+.looks-arrow{width:38px;height:42px;top:auto;bottom:14px;transform:none;border:1px solid #ffffff50;background:#080808c9;color:#fff;font-size:28px}
+.looks-prev{left:14px}.looks-next{left:60px;right:auto}
+.looks-copy{min-width:0;padding:28px 0;display:flex;flex-direction:column;align-items:flex-start}
+.looks-mini-label{display:block;font-size:10px;font-weight:700;letter-spacing:.2em;color:#aaa;margin-bottom:35px}
+.looks-kicker{margin:0 0 14px;color:#d92d22;font-size:clamp(12px,1.2vw,16px);font-weight:700;letter-spacing:.22em}
+.looks-copy h2{font-family:var(--font-display);font-size:clamp(38px,5.2vw,76px);line-height:.98;letter-spacing:-.035em;margin:0;text-transform:uppercase;font-weight:600}
+.looks-copy h2 em{font-style:normal;color:#d92d22}
+.looks-copy-bottom{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:40px;padding-top:18px;border-top:1px solid #333;width:100%}
+.looks-copy-note{font-size:9px;letter-spacing:.14em;color:#888}
+.looks-footer{max-width:1400px;margin:20px auto 0;padding-top:16px;border-top:1px solid #292929}
+@media(max-width:700px){
+ .looks-section{padding:32px 5% 27px!important}
+ .looks-layout{grid-template-columns:minmax(0,1fr);gap:24px}
+ .looks-carousel{height:clamp(280px,100vw,430px);width:100%}
+ .looks-copy{padding:0 2px 6px}
+ .looks-mini-label{margin-bottom:19px;font-size:9px}
+ .looks-kicker{font-size:12px;margin-bottom:10px}
+ .looks-copy h2{font-size:clamp(40px,11vw,62px)}
+ .looks-copy-bottom{margin-top:22px}
+ .looks-arrow{bottom:10px;width:34px;height:36px}
+ .looks-prev{left:10px}.looks-next{left:52px}
+ .looks-footer{margin-top:16px;font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){.looks-track,.looks-arrow,.looks-dots button{transition:none!important}}
+@media(max-width:700px){.header-socials{margin-left:auto;gap:6px}.header-social-link{width:30px;height:30px}.header-social-link svg{width:17px;height:17px}.site-header{gap:7px}.brand{max-width:36%;width:140px}.cart-toggle{flex-shrink:0}}
+
+/* Carrusel editorial con más presencia, inspirado en VANTA y NOIR */
+.looks-section{padding-top:42px!important;padding-bottom:30px!important;background:#080808!important}
+.looks-heading{align-items:flex-end!important;padding-bottom:18px!important;border-bottom:1px solid #ffffff28!important;position:relative!important}
+.looks-title-wrap{display:flex;flex-direction:column;gap:9px;min-width:0}
+.looks-mini-label{font-size:9px!important;font-weight:700!important;letter-spacing:.24em!important;color:#888!important}
+.looks-kicker{color:#d92d22!important;font-size:clamp(13px,1.45vw,18px)!important;font-weight:800!important;letter-spacing:.13em!important;line-height:1.35!important;margin:0!important}
+.looks-counter{color:#d92d22!important;font-size:12px!important;font-weight:800!important;letter-spacing:.13em!important;white-space:nowrap!important;padding:9px 11px!important;border:1px solid #d92d2266!important;background:#d92d220d!important}
+.looks-carousel{margin-top:0!important;background:#080808!important}
+.look-slide,.look-slide img{background:#080808!important}
+.looks-footer{border-top:1px solid #ffffff28!important;margin-top:0!important;padding-top:16px!important;color:#888!important;font-size:9px!important;font-weight:700!important;letter-spacing:.16em!important}
+.looks-dots button.active{background:#d92d22!important}
+
+/* Cinta en movimiento para medios de pago, al estilo VANTA */
+.catalog-marquee{width:100%;overflow:hidden;white-space:nowrap;background:#d92d22;border-top:1px solid #d92d22;border-bottom:1px solid #d92d22;position:relative}
+.catalog-marquee-track{display:inline-block;padding:15px 0;padding-left:100%;font-size:13px;font-weight:800;letter-spacing:.15em;color:#fff;animation:catalogMarquee 28s linear infinite}
+.catalog-marquee-track span{color:#000;margin:0 24px;font-size:15px}
+.catalog-marquee:hover .catalog-marquee-track{animation-play-state:paused}
+@keyframes catalogMarquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(max-width:700px){.catalog-marquee-track{font-size:11px;padding-top:13px;padding-bottom:13px;animation-duration:24s}.catalog-marquee-track span{margin:0 16px}}
+@media(prefers-reduced-motion:reduce){.catalog-marquee-track{animation:none;padding-left:16px;white-space:normal}}
+
+/* CTA para consultar envíos */
+.shipping-cta-wrap{justify-self:end;display:flex;flex-direction:column;align-items:flex-start;gap:16px;max-width:100%}
+.shipping-cta-wrap .shipping-copy{justify-self:auto;margin:0}
+.shipping-query-button{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:13px 16px;background:#d92d22;color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;border:1px solid #d92d22;transition:background .2s,color .2s,transform .2s;white-space:nowrap}
+.shipping-query-button:hover{background:#111;color:#fff;transform:translateY(-2px)}
+.shipping-query-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.shipping-query-button span{font-size:14px;margin-left:3px}
+@media(max-width:700px){.shipping-cta-wrap{justify-self:start;gap:14px}.shipping-query-button{font-size:9px;padding:12px 14px}}
+
+@media(max-width:700px){.looks-section{padding-top:30px!important;padding-bottom:25px!important}.looks-heading{padding-bottom:14px!important;gap:10px!important}.looks-mini-label{font-size:8px!important;letter-spacing:.18em!important}.looks-kicker{font-size:12px!important;letter-spacing:.07em!important;max-width:290px}.looks-counter{font-size:10px!important;padding:7px 8px!important}.looks-footer{font-size:7px!important;letter-spacing:.1em!important}}
+
+
+/* Hero del local: carrusel editorial de fotos reales */
+.hero-photo-carousel{overflow:hidden!important;transform:rotate(2deg);position:relative;isolation:isolate}
+.hero-photo-track{display:flex;width:200%;height:100%;transition:transform 1.1s cubic-bezier(.22,.75,.25,1);will-change:transform}
+.hero-photo-slide{position:relative;flex:0 0 50%;width:50%;height:100%;overflow:hidden}
+.hero-photo-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 50%,rgba(0,0,0,.22));pointer-events:none}
+.hero-photo-slide .hero-photo{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.82);transform:scale(1.025);transition:transform 5.8s ease}
+.hero-photo-carousel.is-first .hero-photo-slide:first-child .hero-photo,.hero-photo-carousel.is-second .hero-photo-slide:last-child .hero-photo{transform:scale(1.09)}
+.hero-photo-progress{position:absolute;z-index:2;bottom:0;left:0;height:3px;width:50%;background:#fff;opacity:.9;transition:transform 1.1s cubic-bezier(.22,.75,.25,1)}
+.hero-photo-carousel.is-second .hero-photo-progress{transform:translateX(200%)}
+
+/* El carrusel de LOOKS usa el mismo tono negro que el fondo de la página */
+.looks-carousel,.look-slide,.look-slide img{background:#080808!important}
+.looks-carousel{background-color:#080808!important}
+
+@media(max-width:700px){.hero-photo-wrap.hero-photo-carousel{width:min(100%,380px);height:360px;min-height:360px}.hero-photo-progress{height:2px}}
+@media(prefers-reduced-motion:reduce){.hero-photo-track,.hero-photo-progress,.hero-photo-slide .hero-photo{transition:none!important}}
+
+/* Ajustes finales de la composición horizontal de LOOKS */
+.looks-section{padding:52px 7% 34px!important}
+.looks-layout{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,.88fr)!important;align-items:center!important;gap:clamp(28px,6vw,92px)!important;max-width:1400px;margin:0 auto}
+.looks-carousel{width:100%!important;min-width:0;height:clamp(330px,39vw,500px)!important;margin:0!important;overflow:hidden!important;background:#111!important;position:relative!important}
+.looks-track{height:100%!important;display:flex!important;transition:transform 1.1s cubic-bezier(.22,.75,.25,1)!important;will-change:transform}
+.look-slide{flex:0 0 100%!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;background:#111!important;overflow:hidden!important}
+.look-slide img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;background:#111!important;display:block!important}
+.looks-arrow{width:38px!important;height:42px!important;top:auto!important;bottom:14px!important;transform:none!important;border:1px solid #ffffff50!important;background:#080808c9!important;color:#fff!important;font-size:28px!important}
+.looks-prev{left:14px!important}.looks-next{left:60px!important;right:auto!important}
+.looks-copy{min-width:0;padding:28px 0;display:flex;flex-direction:column;align-items:flex-start}
+.looks-copy .looks-mini-label{display:block;font-size:10px!important;font-weight:700!important;letter-spacing:.2em!important;color:#aaa!important;margin:0 0 35px!important}
+.looks-copy .looks-kicker{margin:0 0 14px!important;color:#d92d22!important;font-size:clamp(12px,1.2vw,16px)!important;font-weight:700!important;letter-spacing:.22em!important;line-height:1.35!important}
+.looks-copy h2{font-family:var(--font-display);font-size:clamp(38px,5.2vw,76px);line-height:.98;letter-spacing:-.035em;margin:0;text-transform:uppercase;font-weight:600}
+.looks-copy h2 em{font-style:normal;color:#d92d22}
+.looks-copy-bottom{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:40px;padding-top:18px;border-top:1px solid #333;width:100%}
+.looks-copy-bottom .looks-counter{color:#d92d22!important;font-size:12px!important;font-weight:800!important;letter-spacing:.13em!important;white-space:nowrap!important;padding:9px 11px!important;border:1px solid #d92d2266!important;background:#d92d220d!important}
+.looks-copy-note{font-size:9px;letter-spacing:.14em;color:#888}
+.looks-footer{max-width:1400px;margin:20px auto 0!important;padding-top:16px!important;border-top:1px solid #292929!important}
+@media(max-width:700px){
+ .looks-section{padding:32px 5% 27px!important}
+ .looks-layout{grid-template-columns:minmax(0,1fr)!important;gap:24px!important}
+ .looks-carousel{height:clamp(280px,100vw,430px)!important;width:100%!important}
+ .looks-copy{padding:0 2px 6px}
+ .looks-copy .looks-mini-label{margin-bottom:19px!important;font-size:9px!important}
+ .looks-copy .looks-kicker{font-size:12px!important;margin-bottom:10px!important}
+ .looks-copy h2{font-size:clamp(40px,11vw,62px)!important}
+ .looks-copy-bottom{margin-top:22px}
+ .looks-arrow{bottom:10px!important;width:34px!important;height:36px!important}
+ .looks-prev{left:10px!important}.looks-next{left:52px!important}
+ .looks-footer{margin-top:16px!important;font-size:8px!important}
+}
+@media(prefers-reduced-motion:reduce){.looks-track,.looks-arrow,.looks-dots button{transition:none!important}}
+
+/* Subrayado rojo animado al pasar por los enlaces del menú */
+.main-nav>a:not(.nav-cta){position:relative;display:inline-block;padding:8px 0}
+.main-nav>a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:0;bottom:1px;height:2px;background:#d92d22;transform:scaleX(0);transform-origin:center;transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+.main-nav>a:not(.nav-cta):hover::after,.main-nav>a:not(.nav-cta):focus-visible::after{transform:scaleX(1)}
+@media(prefers-reduced-motion:reduce){.main-nav>a:not(.nav-cta)::after{transition:none}}
+
+/* Firma discreta de MZIAR studio al pie del sitio */
+.site-footer .mziar-signature{flex-basis:100%;width:100%;display:flex;flex-direction:column;align-items:center;gap:5px;margin-top:18px;padding-top:16px;border-top:1px solid #333;text-align:center}
+.site-footer .mziar-signature>span{font-size:9px;letter-spacing:.2em;color:#999}
+.site-footer .mziar-signature strong{font-family:var(--font-display,'Oswald',sans-serif);font-size:22px;letter-spacing:.04em;font-weight:600;color:#f1f0eb}
+.site-footer .mziar-signature em{font-family:'Yellowtail',cursive;font-size:25px;font-weight:400;font-style:normal;color:#d92d22;letter-spacing:0}
