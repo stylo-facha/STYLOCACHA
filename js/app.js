@@ -6,18 +6,57 @@ const products = [
  {name:"Oversize",code:"SF-05",category:"Remeras",sizes:"Talles S al XXL",images:["remera5.jpeg"]},
  {name:"Bermuda Mom Con Tira",code:"SF-06",category:"Pantalones y shorts",sizes:"Talles S al XXL",images:["short.jpeg"]},
  {name:"Conjunto deportivo",code:"SF-07",category:"Conjuntos",sizes:"Consultar talles disponibles",images:["nuevoingreso.png","nuevoingreso2.png","nuevoingreso3.png","nuevoingreso4.png"]},
- {name:"Ojotas importadas",code:"SF-08",category:"Ojotas",sizes:"Talles 37 al 44",images:["ojotas.png","ojotas2.png"]},
+ {name:"RETRO-JRDAN",code:"SF-47",category:"Conjuntos",sizes:"Conjunto deportivo de algodón · Consultar talles disponibles",images:["conjuntos de algodon deportivo/retro-jrdan.jpeg","conjuntos de algodon deportivo/retro-jrdan1.jpeg","conjuntos de algodon deportivo/retro-jordan.jpeg","conjuntos de algodon deportivo/retro-jordan3.jpeg"]},
+ {name:"Ojotas importadas",code:"SF-08",category:"Ojotas",sizes:"Talles 37 al 44",images:["ojotas.jpg"]},
+{name:"Ojotas",code:"SF-46",category:"Ojotas",sizes:"Talles 37 al 44",images:["ojotas2.jpg"]},
  {name:"Short NBA / Calidad Premium",code:"SF-09",category:"Pantalones y shorts",sizes:"Consultar talles disponibles",images:["short3.jpeg","short4.jpeg","short5.jpeg","short6.jpeg"]},
- {name:"Zapatillas P180 ⚡️",code:"SF-10",category:"Zapatillas",sizes:"Talles 38 al 43.5",images:["zapatillas7.png"]},
+ {name:"Zapatillas P180 ⚡️",code:"SF-10",category:"Zapatillas",sizes:"Talles 38 al 43.5",images:["zapatillas7.jpg"]},
  {name:"NK Air JRDn Low",code:"SF-11",category:"Zapatillas",sizes:"Talles 38 al 44",images:["zapatillas3.png"]},
- {name:"Zapatillas VANS HYLANE",code:"SF-12",category:"Zapatillas",sizes:"Talles 38 al 44",images:["zapatillas4.png"]},
- {name:"Zapatillas Jordan RM4",code:"SF-13",category:"Zapatillas",sizes:"Talles 38 al 44",images:["zapatillas.png","zapatillas2.png","zapatillas5.png"]},
- {name:"Zapatillas V - A - N - S",code:"SF-14",category:"Zapatillas",sizes:"Talles 38 al 43",images:["zapatillas6.png"]},
- {name:"Ojotas Importadas N K",code:"SF-15",category:"Ojotas",sizes:"Talles 38 al 44",images:["ojotas3.png"]},
+ {name:"Zapatillas V-HYLANE",code:"SF-12",category:"Zapatillas",sizes:"Talles 38 al 44",images:["zapatillas4.jpg"]},
+ {name:"ZAPATILLAS JRDAN RM4",code:"SF-13",category:"Zapatillas",sizes:"Talles 38 al 44",images:["zapatillas.png","zapatillas2.png","zapatillas5.jpg"]},
+ {name:"Zapatillas V - A - N - S",code:"SF-14",category:"Zapatillas",sizes:"Talles 38 al 43",images:["zapatillas6.jpg"]},
+ {name:"JRDAN-BLACK",code:"SF-45",category:"Zapatillas",sizes:"Talles 38 al 44",images:["zapatillas9.jpg","zapatillas8.jpg"]},
+ {name:"Ojotas Importadas N K",code:"SF-15",category:"Ojotas",sizes:"Talles 38 al 44",images:["ojotas3.jpg"]},
  {name:"Pantalones de Gabardina Rectos",code:"SF-16",category:"Pantalones y shorts",sizes:"Consultar talles disponibles",images:["pantalon.png","pantalon2.png"]},
  {name:"Pantalones de Gabardina",code:"SF-17",category:"Pantalones y shorts",sizes:"Consultar talles disponibles",images:["pantalon3.png","pantalon4.png"]},
- {name:"Relojes",code:"SF-18",category:"Accesorios",sizes:"Modelos disponibles por consulta",images:["relojes.jpg","relojjpeg.jpeg"]},
- {name:"Gorras",code:"SF-19",category:"Accesorios",sizes:"Modelos disponibles por consulta",images:["gorras.jpeg","gorra2.png","gorra3.png"]}
+ {name:"Relojes",code:"SF-18",category:"Accesorios",sizes:"Modelos disponibles por consulta",images:["reloj/WhatsApp Image 2026-10-13 at 18.53.09.jpeg","relojjpeg-horizontal.jpg"]},
+ {name:"Gorras",code:"SF-19",category:"Accesorios",sizes:"Modelos disponibles por consulta",images:["gorras.jpeg","gorra2.png","gorra3.png"]},
+ {name:"Billabong",code:"SF-20",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/billabong1.jpeg"]},
+ {name:"Billabong",code:"SF-21",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/billabong2.jpeg"]},
+ {name:"Billabong",code:"SF-22",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/billabong3.jpeg"]},
+ {name:"Billabong",code:"SF-23",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/billabong4.jpeg"]},
+ {name:"Emotion",code:"SF-24",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/emotion.jpeg"]},
+ {name:"Emotion",code:"SF-25",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/emotion2.jpeg"]},
+ {name:"Essentials",code:"SF-26",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/essentials.jpeg"]},
+ {name:"Essentials",code:"SF-27",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/essentials2.jpeg"]},
+ {name:"JRDAN",code:"SF-28",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/j1.jpeg"]},
+ {name:"JRDAN",code:"SF-29",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/j2.jpeg"]},
+ {name:"JRDAN",code:"SF-30",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/j3.jpeg"]},
+ {name:"Paris",code:"SF-31",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/paris.jpeg"]},
+ {name:"Paris",code:"SF-32",category:"Remeras",sizes:"Consultar talles disponibles",images:["remeras/paris2.jpeg"]},
+ {name:"Chicago",code:"SF-33",category:"Pantalones y shorts",sizes:"Consultar talles disponibles",images:["short/chicago.jpeg"]},
+ {name:"Diamont",code:"SF-34",category:"Pantalones y shorts",sizes:"Consultar talles disponibles",images:["short/diamont1.jpeg"]},
+ {name:"Diamont",code:"SF-35",category:"Pantalones y shorts",sizes:"Consultar talles disponibles",images:["short/diamont2.jpeg"]},
+ {name:"Diamont",code:"SF-36",category:"Pantalones y shorts",sizes:"Consultar talles disponibles",images:["short/diamont3.jpeg"]},
+ {name:"Flight",code:"SF-37",category:"Pantalones y shorts",sizes:"Consultar talles disponibles",images:["short/flight1.jpeg"]},
+ {name:"Pantalón sastrero",code:"SF-38",category:"Pantalones y shorts",sizes:"Talles 38 al 48",images:["pantalones/sastreros.jpeg"]},
+ {name:"Pantalón sastrero",code:"SF-39",category:"Pantalones y shorts",sizes:"Talles 38 al 48",images:["pantalones/sastreros2.jpeg"]},
+ {name:"Jean Mom",code:"SF-40",category:"Pantalones y shorts",sizes:"Talles 38 al 48",images:["pantalones/jeans/jeansmom.jpeg"]},
+ {name:"Jean Mom",code:"SF-41",category:"Pantalones y shorts",sizes:"Talles 38 al 48",images:["pantalones/jeans/jeansmom1.jpeg"]},
+ {name:"Jean Mom",code:"SF-42",category:"Pantalones y shorts",sizes:"Talles 38 al 48",images:["pantalones/jeans/jeansmom2.jpeg"]},
+ {name:"Jean Mom",code:"SF-43",category:"Pantalones y shorts",sizes:"Talles 38 al 48",images:["pantalones/jeans/jeansmom3.jpeg"]},
+ {name:"Jean Mom",code:"SF-44",category:"Pantalones y shorts",sizes:"Talles 38 al 48",images:["pantalones/jeans/jeansmom4.jpeg"]},
+
+ {name:"9PM",code:"SF-PF-01",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/9pm.jpg"]},
+ {name:"Al Haramain Amber Oud",code:"SF-PF-02",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/al-haramain-amberd-oud.jpg"]},
+ {name:"Glacier Gold",code:"SF-PF-03",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/glacier-gold.jpg"]},
+ {name:"Glacier Le Noir",code:"SF-PF-04",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/glacier-lenoir.jpg"]},
+ {name:"Glacier Pour Homme",code:"SF-PF-05",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/glacier-pourhomme.jpg"]},
+ {name:"Hawas Verde",code:"SF-PF-06",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/hawas-verde.jpg"]},
+ {name:"Liquid Brun",code:"SF-PF-07",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/liquid-brun.jpg"]},
+ {name:"Liquid Brun 2",code:"SF-PF-08",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/liquid-brun2.jpg"]},
+ {name:"Luminous",code:"SF-PF-09",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/luminous.jpg"]},
+ {name:"Precieux 1",code:"SF-PF-10",category:"Perfumes",sizes:"Consultar disponibilidad",images:["perfumes/precieux 1.jpg"]}
 ];
 const grid=document.getElementById("productGrid");
 const template=document.getElementById("productTemplate");
@@ -25,9 +64,9 @@ const search=document.getElementById("productSearch");
 const count=document.getElementById("resultCount");
 const empty=document.getElementById("emptyState");
 let activeCategory="Todos";
-const WHATSAPP_NUMBER="5493434680372"; // Pablo: pedidos del carrito y consultas por envíos.
+const WHATSAPP_NUMBERS=["5493435027214","5493434618324"]; // Oscar para pedidos y envíos; Diego para consultas generales.
 let cart=[];
-const asset=name=>"ropa%20fotos/"+encodeURIComponent(name);
+const asset=name=>name.includes("/")?encodeURI(name):"ropa%20fotos/"+encodeURIComponent(name);
 
 function setupCart(){
  if(document.getElementById("cartPanel"))return;
@@ -41,11 +80,12 @@ function setupCart(){
  document.addEventListener("keydown",event=>{if(event.key==="Escape")closeCart()});
  updateCart();
 }
-function addProductToCart(product){
- const cartName=product.code?product.name+" · "+product.code:product.name;
+function addProductToCart(product, selectedSize=""){
+ const baseName=product.category==="Remeras"?"Remera "+product.name+(product.code?" · "+product.code:""):(product.code?product.name+" · "+product.code:product.name);
+ const cartName=baseName+(selectedSize?" · Talle "+selectedSize:"");
  const found=cart.find(item=>item.name===cartName);
  if(found)found.quantity++;
- else cart.push({name:product.code?product.name+" · "+product.code:product.name,category:product.category,sizes:product.sizes,image:product.images[0],quantity:1});
+ else cart.push({name:cartName,category:product.category,sizes:selectedSize?"Talle "+selectedSize:product.sizes,image:product.images[0],quantity:1,selectedSize});
  updateCart();
 }
 function updateCart(){
@@ -76,10 +116,12 @@ function openCart(){setupCart();document.getElementById("cartPanel").classList.a
 function closeCart(){const panel=document.getElementById("cartPanel"),overlay=document.getElementById("cartOverlay");if(panel){panel.classList.remove("open");panel.setAttribute("aria-hidden","true")}if(overlay)overlay.classList.remove("open")}
 function sendCartWhatsApp(){
  if(!cart.length){showContactNotice("Primero agregá algún producto al carrito");return;}
- if(!WHATSAPP_NUMBER){showContactNotice("Falta configurar el WhatsApp oficial del local");return;}
- const lines=cart.map(item=>`• ${item.name} — Cantidad: ${item.quantity} (${item.sizes})`);
+ if(!WHATSAPP_NUMBERS.length){showContactNotice("Falta configurar el WhatsApp oficial del local");return;}
+ const lines=cart.map(item=>`• ${item.name} — Cantidad: ${item.quantity}`);
  const message="Hola, Stilo Facha! Quiero consultar por estos productos:\n\n"+lines.join("\n")+"\n\n¿Me confirman precios, colores, talles y disponibilidad?";
- window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank","noopener,noreferrer");
+ const encodedMessage=encodeURIComponent(message);
+ const OSCAR_WHATSAPP_NUMBER="5493435027214";
+ window.open("https://wa.me/"+OSCAR_WHATSAPP_NUMBER+"?text="+encodedMessage,"_blank","noopener,noreferrer");
 }
 
 function renderProducts(){
@@ -95,11 +137,53 @@ function renderProducts(){
   node.querySelector("h3").textContent=product.name;
   node.querySelector(".product-index").textContent=product.code||String(products.indexOf(product)+1).padStart(2,"0");
   if(product.code)node.querySelector(".product-index").classList.add("product-code");
-  node.querySelector(".product-sizes").textContent=product.sizes;
+  const sizesText=node.querySelector(".product-sizes");
+  sizesText.textContent=product.sizes;
   const openDetails=()=>openProductModal(product);
   node.querySelector(".quick-view").addEventListener("click",openDetails);
-  node.querySelector(".product-consult").textContent="AGREGAR AL CARRITO +";
-  node.querySelector(".product-consult").addEventListener("click",()=>{addProductToCart(product);showContactNotice(product.name+" agregado al carrito")});
+  const addButton=node.querySelector(".product-consult");
+  addButton.textContent="AGREGAR AL CARRITO +";
+  if(product.category==="Remeras"||product.name==="Jean Mom"){
+   const isJeans=product.name==="Jean Mom";
+   sizesText.textContent="ELEGÍ TU TALLE";
+   const sizeOptions=document.createElement("div");
+   sizeOptions.className="product-size-options";
+   sizeOptions.setAttribute("role","group");
+   sizeOptions.setAttribute("aria-label","Elegir talle para "+product.name+" "+product.code);
+   let selectedSize="";
+   (isJeans?["38","40","42","44","46","48"]:["S","M","L","XL","XXL"]).forEach(size=>{
+    const sizeButton=document.createElement("button");
+    sizeButton.type="button";
+    sizeButton.className="product-size-option";
+    sizeButton.textContent=size;
+    sizeButton.setAttribute("aria-pressed","false");
+    sizeButton.setAttribute("aria-label","Talle "+size);
+    sizeButton.addEventListener("click",()=>{
+     selectedSize=size;
+     sizeOptions.querySelectorAll("button").forEach(button=>{
+      const active=button===sizeButton;
+      button.classList.toggle("active",active);
+      button.setAttribute("aria-pressed",String(active));
+     });
+     addButton.classList.remove("needs-size");
+    });
+    sizeOptions.appendChild(sizeButton);
+   });
+   sizesText.insertAdjacentElement("afterend",sizeOptions);
+   addButton.addEventListener("click",()=>{
+    if(!selectedSize){
+     addButton.classList.add("needs-size");
+     showContactNotice(isJeans?"Elegí un talle del 38 al 48":"Elegí un talle: S, M, L, XL o XXL");
+     return;
+    }
+    addProductToCart(product,selectedSize);
+    showContactNotice((isJeans?"Jean Mom ":"Remera ")+product.code+" · Talle "+selectedSize+" agregado al carrito");
+   });
+  }else{
+   addButton.addEventListener("click",()=>{
+    addProductToCart(product);showContactNotice(product.name+" agregado al carrito");
+   });
+  }
   img.addEventListener("click",openDetails);
   img.style.cursor="zoom-in";
   grid.appendChild(node);
@@ -112,7 +196,7 @@ function openProductModal(product){
  if(!modal){
   modal=document.createElement("div");
   modal.id="productModal";modal.className="product-modal";modal.hidden=true;
-  modal.innerHTML=`<div class="product-modal-backdrop" data-close="true"></div><section class="product-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalProductName"><button class="product-modal-close" type="button" aria-label="Cerrar ventana">×</button><div class="product-modal-gallery"><div class="product-modal-carousel"><div class="product-modal-peek-frame product-modal-peek-frame-prev"><img class="product-modal-peek product-modal-peek-prev" alt="" aria-hidden="true"></div><div class="product-modal-main-frame"><img class="product-modal-main-image" alt=""></div><div class="product-modal-peek-frame product-modal-peek-frame-next"><img class="product-modal-peek product-modal-peek-next" alt="" aria-hidden="true"></div><button class="product-modal-arrow product-modal-prev" type="button" aria-label="Foto anterior">‹</button><button class="product-modal-arrow product-modal-next" type="button" aria-label="Foto siguiente">›</button><span class="product-modal-counter" aria-live="polite"></span></div><div class="product-modal-thumbnails"></div></div><div class="product-modal-details"><p class="product-modal-kicker">STILO FACHA · CATÁLOGO</p><h2 id="modalProductName"></h2><p class="product-modal-code"></p><p class="product-modal-category"></p><p class="product-modal-sizes"></p><p class="product-modal-note">Consultá por disponibilidad, colores y talles en el local.</p><button class="product-modal-contact" type="button">CONSULTAR ESTE PRODUCTO ↗</button></div></section>`;
+  modal.innerHTML=`<div class="product-modal-backdrop" data-close="true"></div><section class="product-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalProductName"><button class="product-modal-close" type="button" aria-label="Cerrar ventana">×</button><div class="product-modal-gallery"><div class="product-modal-carousel"><div class="product-modal-peek-frame product-modal-peek-frame-prev"><img class="product-modal-peek product-modal-peek-prev" alt="" aria-hidden="true"></div><div class="product-modal-main-frame"><img class="product-modal-main-image" alt=""></div><div class="product-modal-peek-frame product-modal-peek-frame-next"><img class="product-modal-peek product-modal-peek-next" alt="" aria-hidden="true"></div><button class="product-modal-arrow product-modal-prev" type="button" aria-label="Foto anterior">‹</button><button class="product-modal-arrow product-modal-next" type="button" aria-label="Foto siguiente">›</button><span class="product-modal-counter" aria-live="polite"></span></div><div class="product-modal-thumbnails"></div></div><div class="product-modal-details"><p class="product-modal-kicker">STILO FACHA · CATÁLOGO</p><h2 id="modalProductName"></h2><p class="product-modal-code"></p><p class="product-modal-category"></p><p class="product-modal-sizes"></p><label class="product-modal-size-picker" hidden for="modalSizeSelect">ELEGÍ TU TALLE<select id="modalSizeSelect"><option value="">Seleccioná un talle</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="XXL">XXL</option><option value="38">38</option><option value="40">40</option><option value="42">42</option><option value="44">44</option><option value="46">46</option><option value="48">48</option></select></label><p class="product-modal-note">Consultá por disponibilidad, colores y talles en el local.</p><button class="product-modal-contact" type="button">AGREGAR AL CARRITO +</button></div></section>`;
   document.body.appendChild(modal);
   modal.querySelector(".product-modal-close").addEventListener("click",()=>{modal.hidden=true;document.body.classList.remove("modal-open")});
   modal.querySelector(".product-modal-backdrop").addEventListener("click",()=>{modal.hidden=true;document.body.classList.remove("modal-open")});
@@ -123,7 +207,22 @@ function openProductModal(product){
  let selectedProduct=product;
  const addFromModal=modal.querySelector(".product-modal-contact");
  addFromModal.textContent="AGREGAR AL CARRITO +";
- addFromModal.onclick=()=>{addProductToCart(selectedProduct);modal.hidden=true;document.body.classList.remove("modal-open");showContactNotice(selectedProduct.name+" agregado al carrito")};
+ const sizePicker=modal.querySelector(".product-modal-size-picker");
+ const sizeSelect=modal.querySelector("#modalSizeSelect");
+ addFromModal.onclick=()=>{
+  const needsSize=selectedProduct.category==="Remeras"||selectedProduct.name==="Jean Mom";
+  const selectedSize=needsSize?sizeSelect.value:"";
+  if(needsSize&&!selectedSize){
+   sizePicker.classList.add("needs-size");
+   sizeSelect.focus();
+   showContactNotice(selectedProduct.name==="Jean Mom"?"Elegí un talle del 38 al 48 para agregar el jean":"Elegí un talle (S al XXL) para agregar la remera");
+   return;
+  }
+  sizePicker.classList.remove("needs-size");
+  addProductToCart(selectedProduct,selectedSize);
+  modal.hidden=true;document.body.classList.remove("modal-open");
+  showContactNotice(selectedProduct.name+(selectedSize?" · Talle "+selectedSize:"")+" agregado al carrito");
+ };
  const main=modal.querySelector(".product-modal-main-image");
  const peekPrev=modal.querySelector(".product-modal-peek-prev");
  const peekNext=modal.querySelector(".product-modal-peek-next");
@@ -145,6 +244,11 @@ function openProductModal(product){
   codeLabel.textContent=selectedProduct.code||"";codeLabel.hidden=!selectedProduct.code;
   modal.querySelector(".product-modal-category").textContent=selectedProduct.category;
   modal.querySelector(".product-modal-sizes").textContent=selectedProduct.sizes;
+  sizePicker.hidden=selectedProduct.category!=="Remeras"&&selectedProduct.name!=="Jean Mom";
+  sizeSelect.querySelectorAll("option").forEach(option=>{if(option.value)option.hidden=selectedProduct.name==="Jean Mom"?!/^([0-9]{2})$/.test(option.value):/^[0-9]{2}$/.test(option.value)});
+  sizePicker.classList.remove("needs-size");
+  sizeSelect.value="";
+  addFromModal.textContent=selectedProduct.category==="Remeras"?"AGREGAR AL CARRITO +":"AGREGAR AL CARRITO +";
   thumbs.querySelectorAll("button").forEach((item,i)=>item.classList.toggle("active",i===currentIndex));
   prev.hidden=next.hidden=galleryProducts.length<2;
  };
@@ -185,8 +289,8 @@ const menuToggle=document.getElementById("menuToggle");
 const nav=document.getElementById("mainNav");
 menuToggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open));});
 nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");}));
-document.getElementById("whatsappLink").addEventListener("click",event=>{event.preventDefault();if(cart.length){openCart()}else if(WHATSAPP_NUMBER){window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("Hola, Stilo Facha! Quería hacer una consulta por productos."),"_blank","noopener,noreferrer")}else{showContactNotice("Falta configurar el WhatsApp oficial del local")}});
-document.getElementById("shippingWhatsappLink").addEventListener("click",event=>{if(WHATSAPP_NUMBER){event.preventDefault();window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("Hola, Stilo Facha! Quería consultar por los envíos a mi localidad."),"_blank","noopener,noreferrer")}});
+document.getElementById("whatsappLink").addEventListener("click",event=>{event.preventDefault();if(cart.length){openCart()}else if(WHATSAPP_NUMBERS.length){window.open("https://wa.me/"+WHATSAPP_NUMBERS[0]+"?text="+encodeURIComponent("Hola, Stilo Facha! Quería hacer una consulta por productos."),"_blank","noopener,noreferrer")}else{showContactNotice("Falta configurar el WhatsApp oficial del local")}});
+document.getElementById("shippingWhatsappLink").addEventListener("click",event=>{if(WHATSAPP_NUMBERS.length){event.preventDefault();window.open("https://wa.me/"+WHATSAPP_NUMBERS[0]+"?text="+encodeURIComponent("Hola, Stilo Facha! Quería consultar por los envíos a mi localidad."),"_blank","noopener,noreferrer")}});
 
 function setupHeroPhotoCarousel(){
  const carousel=document.getElementById("heroPhotoCarousel");

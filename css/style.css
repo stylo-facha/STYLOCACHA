@@ -586,3 +586,559 @@ html,body,main{background:#080808!important;color:#f5f5f5!important}
 .site-footer .mziar-signature>span{font-size:9px;letter-spacing:.2em;color:#999}
 .site-footer .mziar-signature strong{font-family:var(--font-display,'Oswald',sans-serif);font-size:22px;letter-spacing:.04em;font-weight:600;color:#f1f0eb}
 .site-footer .mziar-signature em{font-family:'Yellowtail',cursive;font-size:25px;font-weight:400;font-style:normal;color:#d92d22;letter-spacing:0}
+
+/* Video real del recorrido en el hero */
+.hero-photo-wrap.hero-video-wrap{overflow:hidden!important;transform:rotate(2deg);position:relative;background:#111}
+.hero-video{display:block;width:100%;height:100%;object-fit:cover;filter:none!important;transform:none!important}
+@media(max-width:700px){.hero-photo-wrap.hero-video-wrap{width:min(100%,380px);height:360px;min-height:360px;max-width:none}}
+
+/* Hero: video un poco mas ancho para ocupar mas pantalla */
+.hero-visual:has(.hero-video-wrap){margin-left:-22%;margin-right:-4%}
+.hero-photo-wrap.hero-video-wrap{width:min(115%,520px)}
+@media(max-width:900px){
+  .hero-visual:has(.hero-video-wrap){margin-left:-18%;margin-right:-2%}
+  .hero-photo-wrap.hero-video-wrap{width:min(112%,480px)}
+}
+@media(max-width:700px){
+  .hero-visual:has(.hero-video-wrap){margin:-6px -3% 20px;min-height:320px}
+  .hero-photo-wrap.hero-video-wrap{width:100%;max-width:none;height:340px;min-height:340px}
+}
+
+
+/* Ajuste del hero: mostrar más fachada y dejar respirar el cartel */
+.hero-visual:has(.hero-video-wrap){margin-left:0!important;margin-right:0!important;display:flex;justify-content:center;align-items:center}
+.hero-photo-wrap.hero-video-wrap{width:min(100%,320px)!important;height:568px!important;min-height:0!important;margin:0 auto!important;transform:none!important;aspect-ratio:9/16}
+.hero-video{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;background:#080808}
+@media(max-width:900px){
+  .hero-visual:has(.hero-video-wrap){margin:0!important;min-height:0!important}
+  .hero-photo-wrap.hero-video-wrap{width:min(84vw,300px)!important;height:auto!important;min-height:0!important;aspect-ratio:9/16}
+}
+@media(max-width:700px){
+  .hero-visual:has(.hero-video-wrap){margin:8px 0 22px!important;min-height:0!important}
+  .hero-photo-wrap.hero-video-wrap{width:min(76vw,270px)!important;height:auto!important;min-height:0!important;aspect-ratio:9/16;max-width:none!important}
+}
+/* Ajuste fino del hero: video más grande y desplazado hacia la izquierda */
+.hero-visual:has(.hero-video-wrap){
+  margin-left:-28px!important;
+  margin-right:0!important;
+  display:flex;
+  justify-content:flex-start!important;
+  align-items:center;
+}
+.hero-photo-wrap.hero-video-wrap{
+  width:min(100%,360px)!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  aspect-ratio:9/16;
+}
+@media(max-width:900px){
+  .hero-visual:has(.hero-video-wrap){margin-left:-20px!important;margin-right:0!important}
+  .hero-photo-wrap.hero-video-wrap{width:min(88vw,330px)!important;height:auto!important;aspect-ratio:9/16}
+}
+@media(max-width:700px){
+  .hero-visual:has(.hero-video-wrap){margin:8px 0 22px -16px!important;min-height:0!important}
+  .hero-photo-wrap.hero-video-wrap{width:min(82vw,300px)!important;height:auto!important;min-height:0!important;aspect-ratio:9/16;max-width:none!important}
+}/* Stylo Facha: inclinación editorial y halo decorativo detrás del video */
+.hero-photo-wrap.hero-video-wrap{
+  position:relative!important;
+  isolation:isolate;
+  transform:rotate(-3deg)!important;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:3px;
+  box-shadow:0 24px 55px rgba(0,0,0,.48),0 0 0 7px rgba(255,255,255,.025);
+  z-index:1;
+}
+.hero-photo-wrap.hero-video-wrap::before{
+  content:"";
+  position:absolute;
+  z-index:-2;
+  inset:7% -10% -5% 10%;
+  background:linear-gradient(145deg,rgba(220,25,40,.48),rgba(220,25,40,.04) 55%,rgba(255,255,255,.12));
+  filter:blur(24px);
+  transform:rotate(7deg);
+  pointer-events:none;
+}
+.hero-photo-wrap.hero-video-wrap::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-13px 12px 13px -12px;
+  border:1px solid rgba(225,35,48,.55);
+  background:linear-gradient(135deg,rgba(255,255,255,.035),transparent 45%);
+  transform:rotate(5deg);
+  pointer-events:none;
+}
+.hero-video-wrap .hero-video{
+  border-radius:2px;
+}
+@media(max-width:700px){
+  .hero-photo-wrap.hero-video-wrap{transform:rotate(-2.5deg)!important}
+}/* Último ajuste: más ancho, conservando formato vertical y efectos */
+.hero-photo-wrap.hero-video-wrap{
+  width:min(100%,410px)!important;
+}
+@media(max-width:900px){
+  .hero-photo-wrap.hero-video-wrap{width:min(94vw,370px)!important}
+}
+@media(max-width:700px){
+  .hero-photo-wrap.hero-video-wrap{width:min(90vw,340px)!important}
+}/* Volver al ancho compacto inicial, manteniendo la inclinación y el efecto de profundidad */
+.hero-photo-wrap.hero-video-wrap{
+  width:min(100%,320px)!important;
+}
+@media(max-width:900px){
+  .hero-photo-wrap.hero-video-wrap{width:min(84vw,300px)!important}
+}
+@media(max-width:700px){
+  .hero-photo-wrap.hero-video-wrap{width:min(76vw,270px)!important}
+}
+/* Centrar un poco más el video sin perder el tamaño ni la inclinación */
+.hero-visual:has(.hero-video-wrap){margin-left:0!important;margin-right:0!important;justify-content:center!important}
+.hero-photo-wrap.hero-video-wrap{margin-left:12px!important;margin-right:auto!important}
+@media(max-width:900px){
+  .hero-visual:has(.hero-video-wrap){margin-left:0!important;margin-right:0!important}
+  .hero-photo-wrap.hero-video-wrap{margin-left:14px!important;margin-right:auto!important}
+}
+@media(max-width:700px){
+  .hero-visual:has(.hero-video-wrap){margin-left:0!important;margin-right:0!important}
+  .hero-photo-wrap.hero-video-wrap{margin-left:12px!important;margin-right:auto!important}
+}/* Logo redondo SF arriba del video, integrado al hero */
+.hero-visual:has(.hero-video-wrap){
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:12px!important;
+}
+.hero-visual .hero-stamp{
+  position:relative!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  order:-1!important;
+  flex-shrink:0;
+  width:76px!important;
+  height:76px!important;
+  margin:0 0 2px 12px!important;
+  border:2px solid #d92d22;
+  box-shadow:0 0 0 5px rgba(217,45,34,.12),0 8px 24px rgba(0,0,0,.4);
+  transform:rotate(-12deg)!important;
+  z-index:3;
+}
+.hero-visual .hero-stamp>span{font-size:38px!important}
+.hero-visual .hero-stamp small{font-size:7px!important}
+.hero-photo-wrap.hero-video-wrap{order:1!important}
+@media(max-width:700px){
+  .hero-visual:has(.hero-video-wrap){gap:10px!important}
+  .hero-visual .hero-stamp{width:68px!important;height:68px!important;margin-left:12px!important}
+  .hero-visual .hero-stamp>span{font-size:34px!important}
+}/* Corrección: el sello SF vuelve a superponerse sobre la esquina superior del video */
+.hero-visual:has(.hero-video-wrap){
+  position:relative!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+}
+.hero-visual .hero-stamp{
+  position:absolute!important;
+  top:8px!important;
+  left:calc(50% + 82px)!important;
+  right:auto!important;
+  bottom:auto!important;
+  order:initial!important;
+  width:76px!important;
+  height:76px!important;
+  margin:0!important;
+  border:2px solid #d92d22;
+  box-shadow:0 0 0 5px rgba(217,45,34,.12),0 8px 24px rgba(0,0,0,.4);
+  transform:rotate(-12deg)!important;
+  z-index:5!important;
+}
+.hero-visual .hero-stamp>span{font-size:38px!important}
+.hero-visual .hero-stamp small{font-size:7px!important}
+.hero-photo-wrap.hero-video-wrap{order:initial!important}
+@media(max-width:700px){
+  .hero-visual .hero-stamp{
+    top:8px!important;
+    left:calc(50% + 44px)!important;
+    width:68px!important;
+    height:68px!important;
+  }
+  .hero-visual .hero-stamp>span{font-size:34px!important}
+}
+/* PALETA BLANCA SOLICITADA POR EL CLIENTE — conserva estructura, fotos, efectos y funciones */
+:root{--ink:#111;--paper:#fff;--white:#fff;--muted:#666;--line:#ddd;--acid:#d92d22}
+html,body{background:#fff!important;color:#111!important}
+.shipping-bar{background:#fff!important;color:#111!important;border-bottom:1px solid #eee}
+.site-header{background:#fff!important;color:#111!important;border-bottom:1px solid #ddd!important}
+.brand-wordmark,.hero-brand-title.brand-wordmark{color:#111!important;text-shadow:none!important}
+.brand-wordmark:hover{color:#333!important}
+.main-nav>a:not(.nav-cta){color:#111!important}
+.main-nav>a:hover{color:#333!important}
+.menu-toggle{color:#111!important}
+.menu-toggle span{background:#111!important}
+.main-nav{background:#fff!important;color:#111!important;border-color:#ddd!important}
+.header-social-link{background:#fff!important;color:#111!important;border-color:#ccc!important}
+.header-social-link:hover{background:#d92d22!important;color:#fff!important;border-color:#d92d22!important}
+.nav-cta{background:#fff!important;color:#111!important;border:1px solid #111!important}
+.hero{background:#fff!important;color:#111!important}
+.hero:before{border-color:#eee!important}
+.hero h1,.hero h1 em,.hero-brand-title,.hero-brand-title em{color:#111!important;text-shadow:none!important}
+.hero-description{color:#444!important}
+.hero-meta,.hero-side-label{color:#666!important}
+.hero-bottomline{border-color:#ddd!important;color:#444!important}
+.hero-bottomline b{color:#111!important}
+.hero-photo-wrap{background:#f7f7f7!important;border-color:#ddd!important}
+.hero-photo-wrap.hero-video-wrap{border-color:#ddd!important}
+.hero-stamp{background:#fff!important;color:#111!important}
+.text-link{color:#222!important}
+.button-light{background:#fff!important;color:#111!important;border:1px solid #111!important}
+.button-dark{background:#fff!important;color:#111!important;border:1px solid #111!important}
+.catalog-section,.contact-section,.shipping-section,.store-section,.site-footer,.looks-section{background:#fff!important;color:#111!important}
+.section-heading h2,.contact-section h2,.store-copy h2,.shipping-section h2,.looks-copy h2{color:#111!important}
+.dark-eyebrow,.section-note,.contact-copy,.contact-location{color:#444!important}
+.accent,.hero h1 em,.store-copy h2 em,.shipping-section h2 em{color:#555!important}
+.filter{background:#fff!important;color:#111!important;border-color:#bbb!important}
+.filter:hover,.filter.active{background:#111!important;color:#fff!important;border-color:#111!important}
+.search-box{border-color:#aaa!important}
+.search-box input{color:#111!important}
+.product-count{border-color:#ddd!important;color:#555!important}
+.product-image-wrap,.product-modal-gallery,.product-modal-carousel,.look-slide,.look-slide img,.looks-carousel{background:#fff!important}
+.product-category{background:rgba(255,255,255,.94)!important;color:#111!important;border:1px solid #ddd!important}
+.product-info,.product-name-row h3,.product-index,.product-sizes,.product-consult{color:#111!important}
+.product-index,.product-sizes{color:#555!important}
+.product-consult{background:#fff!important;color:#111!important;border-color:#bbb!important}
+.product-consult:hover{background:#f4f4f4!important;color:#111!important}
+.quick-view{background:#fff!important;color:#111!important;border:1px solid #ddd!important}
+.store-copy>p:not(.eyebrow){color:#444!important}
+.store-address{border-color:#ddd!important}
+.store-address strong{color:#111!important}
+.store-address small{color:#555!important}
+.pin-icon{color:#111!important}
+.image-tag{background:#fff!important;color:#111!important;border:1px solid #ddd!important}
+.shipping-section{border-top:1px solid #eee!important;border-bottom:1px solid #eee!important}
+.shipping-copy{color:#333!important}
+.contact-copy,.contact-hint{color:#555!important}
+.contact-hint{color:#666!important}
+.site-footer{border-top:1px solid #ddd!important;color:#555!important}
+.footer-brand,.site-footer .mziar-signature strong{color:#111!important}
+.site-footer .mziar-signature{border-color:#ddd!important}
+.site-footer .mziar-signature>span{color:#555!important}
+.site-footer>a:last-child{color:#111!important}
+.looks-section{border-color:#ddd!important}
+.looks-heading,.looks-footer,.looks-copy-bottom{border-color:#ddd!important}
+.looks-mini-label,.looks-copy .looks-mini-label,.looks-copy-note,.looks-footer{color:#555!important}
+.looks-copy .looks-kicker,.looks-copy h2 em{color:#d92d22!important}
+.looks-carousel,.look-slide,.look-slide img{background:#fff!important}
+.looks-arrow{background:#fff!important;color:#111!important;border-color:#bbb!important}
+.looks-arrow:hover{background:#d92d22!important;color:#fff!important;border-color:#d92d22!important}
+.catalog-marquee{background:#fff!important;border-color:#ddd!important}
+.catalog-marquee-track{color:#111!important}
+.catalog-marquee-track span{color:#555!important}
+.product-modal{background:rgba(255,255,255,.94)!important}
+.product-modal-backdrop{background:rgba(255,255,255,.88)!important;backdrop-filter:blur(8px)!important}
+.product-modal-panel{background:#fff!important;color:#111!important}
+.product-modal-close{background:#fff!important;color:#111!important;border:1px solid #ddd!important}
+.product-modal-gallery{background:#fff!important}
+.product-modal-carousel,.product-modal-main-frame,.product-modal-peek-frame{background:#fff!important}
+.product-modal-main-frame .product-modal-main-image{background:#fff!important}
+.product-modal-kicker,.product-modal-category{color:#555!important}
+.product-modal-sizes{border-color:#ddd!important;color:#111!important}
+.product-modal-note{color:#444!important}
+.product-modal-contact{background:#d92d22!important;color:#fff!important;border-color:#d92d22!important}
+.product-modal-arrow{background:rgba(255,255,255,.95)!important;color:#111!important;border-color:#ddd!important}
+.product-modal-counter{background:rgba(255,255,255,.95)!important;color:#111!important}
+.cart-panel{background:#fff!important;color:#111!important;border-color:#ddd!important}
+.cart-header{border-color:#ddd!important}
+.cart-header h2,.cart-item-info h3{color:#111!important}
+.cart-item{border-color:#ddd!important}
+.cart-item-photo{background:#f5f5f5!important;border-color:#ddd!important}
+.cart-item-info p{color:#555!important}
+.cart-quantity button{background:#fff!important;border-color:#bbb!important;color:#111!important}
+.cart-quantity span{color:#111!important}
+.cart-remove{color:#b3261e!important}
+.cart-empty,.cart-note{color:#555!important}
+.cart-footer{border-color:#ddd!important}
+.contact-notice{background:#fff!important;color:#111!important;border:1px solid #ddd!important;border-left:4px solid #d92d22!important}
+.empty-state{color:#555!important}
+.shipping-query-button,.cart-toggle,.checkout{background:#d92d22!important;color:#fff!important;border-color:#d92d22!important}
+.shipping-query-button:hover,.cart-toggle:hover,.checkout:hover{background:#b8241b!important;color:#fff!important}
+@media(max-width:700px){
+ .main-nav{background:#fff!important;border-color:#ddd!important}
+ .menu-toggle span{background:#111!important}
+ .site-footer{background:#fff!important;color:#555!important}
+ .product-modal-panel{background:#fff!important;color:#111!important}
+ .cart-panel{background:#fff!important;color:#111!important}
+}
+
+/* El espacio vacío del video también acompaña la nueva paleta */
+.hero-video{background:#fff!important}
+
+
+/* AJUSTE DE IDENTIDAD VISUAL: blanco + negro + madera clara + luz cálida */
+:root{
+  --ink:#171614;
+  --paper:#fff;
+  --white:#fff;
+  --muted:#716b63;
+  --line:#e5ded3;
+  --acid:#171614;
+  --wood:#e9dcc7;
+  --warm:#f8f5ef;
+  --warm-shadow:#eee4d5;
+}
+html,body{background:#fff!important;color:#171614!important}
+/* Blanco limpio como base; tipografía y cartelería en negro */
+.shipping-bar,.site-header,.main-nav,.hero,.catalog-section,.contact-section,.store-section,.site-footer,.product-modal-panel,.cart-panel{background-color:#fff!important;color:#171614!important}
+.brand-wordmark,.hero h1,.hero h1 em,.hero-brand-title,.hero-brand-title em,.section-heading h2,.contact-section h2,.store-copy h2,.shipping-section h2,.looks-copy h2,.footer-brand,.site-footer .mziar-signature strong{color:#171614!important;text-shadow:none!important}
+.main-nav>a:not(.nav-cta),.header-social-link,.menu-toggle,.text-link,.contact-location,.site-footer>a{color:#171614!important}
+.menu-toggle span{background:#171614!important}
+.nav-cta,.button-light,.button-dark,.product-consult,.quick-view,.looks-arrow,.product-modal-close,.cart-quantity button{background:#fff!important;color:#171614!important;border:1px solid #171614!important}
+.nav-cta:hover,.button-light:hover,.button-dark:hover,.product-consult:hover,.quick-view:hover,.header-social-link:hover{background:#171614!important;color:#fff!important;border-color:#171614!important}
+.cart-toggle,.checkout,.shipping-query-button,.product-modal-contact{background:#171614!important;color:#fff!important;border-color:#171614!important}
+.cart-toggle:hover,.checkout:hover,.shipping-query-button:hover,.product-modal-contact:hover{background:#38332d!important;color:#fff!important;border-color:#38332d!important}
+.accent,.hero h1 em,.store-copy h2 em,.shipping-section h2 em,.looks-copy .looks-kicker,.looks-copy h2 em{color:#171614!important}
+.eyebrow-dot{background:#171614!important;box-shadow:0 0 0 4px rgba(23,22,20,.08)!important}
+/* Tonos madera clara en bloques seleccionados, sin competir con las prendas */
+.shipping-section{
+  background-color:#f1e6d5!important;
+  background-image:repeating-linear-gradient(2deg,rgba(150,111,65,.035) 0,rgba(150,111,65,.035) 1px,transparent 1px,transparent 9px),linear-gradient(100deg,#f5ecdf 0%,#eadbc4 48%,#f6eee3 100%)!important;
+  color:#171614!important;border-top:1px solid #dfcfb7!important;border-bottom:1px solid #dfcfb7!important;
+}
+.shipping-section .eyebrow,.shipping-copy,.shipping-mark{color:#171614!important}
+.shipping-mark{border-color:#171614!important}
+.looks-copy{background:linear-gradient(135deg,#fff 0%,#fff 70%,#f7f1e8 100%)!important}
+.looks-copy-bottom,.looks-heading,.looks-footer{border-color:#e5ded3!important}
+.catalog-marquee{background:#f5eee3!important;border-color:#e5d8c6!important}
+.catalog-marquee-track,.catalog-marquee-track span{color:#171614!important}
+.hero-bottomline{background:#f8f5ef!important;border-color:#e5ded3!important;color:#171614!important}
+.hero-bottomline b{color:#171614!important}
+.hero-photo-wrap,.hero-photo-wrap.hero-video-wrap{background:#f8f5ef!important;border-color:#e5ded3!important}
+.hero-video{background:#f8f5ef!important}
+.image-tag{background:#fff!important;color:#171614!important;border:1px solid #d8c7af!important}
+.store-address,.product-count,.search-box,.product-sizes,.product-modal-sizes{border-color:#e5ded3!important}
+.filter{background:#fff!important;color:#171614!important;border-color:#d8cfc2!important}
+.filter:hover,.filter.active{background:#171614!important;color:#fff!important;border-color:#171614!important}
+.product-category{background:rgba(255,255,255,.96)!important;color:#171614!important;border-color:#e5ded3!important}
+.product-image-wrap,.product-modal-gallery,.product-modal-carousel,.look-slide,.look-slide img,.looks-carousel,.product-modal-main-frame,.product-modal-peek-frame{background:#fff!important}
+.product-modal-backdrop{background:rgba(35,29,22,.58)!important;backdrop-filter:blur(8px)!important}
+.product-modal{background:transparent!important}
+.product-modal-panel{border:1px solid #e5ded3!important}
+.cart-panel{border-color:#e5ded3!important}
+.cart-item-photo{background:#f8f5ef!important;border-color:#e5ded3!important}
+.contact-notice{background:#f8f5ef!important;color:#171614!important;border-left-color:#171614!important;border-color:#e5ded3!important}
+.site-footer{border-top:1px solid #e5ded3!important}
+.site-footer .mziar-signature{border-color:#e5ded3!important}
+@media(max-width:700px){
+  .main-nav{background:#fff!important;border-color:#e5ded3!important}
+  .shipping-section{background-image:repeating-linear-gradient(2deg,rgba(150,111,65,.035) 0,rgba(150,111,65,.035) 1px,transparent 1px,transparent 9px),linear-gradient(100deg,#f5ecdf 0%,#eadbc4 48%,#f6eee3 100%)!important}
+}
+
+
+/* Sello SF: reemplaza el borde rojo por negro y sombra cálida sutil */
+.hero-visual .hero-stamp{
+  border-color:#171614!important;
+  box-shadow:0 0 0 5px rgba(23,22,20,.08),0 8px 24px rgba(80,60,35,.14)!important;
+  background:#fff!important;
+  color:#171614!important;
+}
+.hero-visual .hero-stamp>span,.hero-visual .hero-stamp small{color:#171614!important}
+
+
+/* Ficha de producto: identidad Stylo Facha, blanco, negro y detalles cálidos */
+.product-modal-details{
+  background:linear-gradient(145deg,#fff 0%,#fff 78%,#faf6ef 100%)!important;
+  color:#171614!important;
+  padding:clamp(22px,3vw,38px)!important;
+}
+.product-modal-kicker{
+  color:#716b63!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  letter-spacing:.19em!important;
+  text-transform:uppercase!important;
+  margin-bottom:18px!important;
+}
+.product-modal-details h2,#modalProductName{
+  color:#171614!important;
+  font-size:clamp(32px,4vw,48px)!important;
+  font-weight:800!important;
+  letter-spacing:-.045em!important;
+  line-height:.98!important;
+  text-transform:uppercase!important;
+  margin:0 0 14px!important;
+}
+.product-modal-code{
+  display:inline-flex!important;
+  align-items:center!important;
+  color:#171614!important;
+  background:#f5eee3!important;
+  border:1px solid #e5d8c6!important;
+  padding:6px 9px!important;
+  font-size:10px!important;
+  font-weight:800!important;
+  letter-spacing:.13em!important;
+  margin:0 8px 0 0!important;
+}
+.product-modal-category{
+  display:inline-block!important;
+  color:#716b63!important;
+  font-size:11px!important;
+  font-weight:600!important;
+  letter-spacing:.1em!important;
+  text-transform:uppercase!important;
+  margin:0!important;
+}
+.product-modal-sizes{
+  display:inline-flex!important;
+  align-items:center!important;
+  width:max-content!important;
+  max-width:100%!important;
+  padding:11px 14px!important;
+  margin:22px 0 14px!important;
+  background:#fff!important;
+  border:1px solid #d9cbb8!important;
+  color:#171614!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  letter-spacing:.035em!important;
+}
+.product-modal-note{
+  color:#716b63!important;
+  font-size:12px!important;
+  line-height:1.7!important;
+  max-width:34ch!important;
+  margin:0 0 24px!important;
+}
+.product-modal-contact{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  min-height:52px!important;
+  padding:15px 18px!important;
+  background:#171614!important;
+  color:#fff!important;
+  border:1px solid #171614!important;
+  border-radius:0!important;
+  font-size:11px!important;
+  font-weight:800!important;
+  letter-spacing:.12em!important;
+  text-align:center!important;
+  transition:background .2s ease,color .2s ease,transform .2s ease!important;
+}
+.product-modal-contact:hover{
+  background:#38332d!important;
+  color:#fff!important;
+  border-color:#38332d!important;
+  transform:translateY(-1px)!important;
+}
+@media(max-width:700px){
+  .product-modal-details{padding:23px 20px 25px!important}
+  .product-modal-kicker{font-size:9px!important;margin-bottom:14px!important}
+  .product-modal-details h2,#modalProductName{font-size:34px!important;margin-bottom:12px!important}
+  .product-modal-sizes{margin-top:18px!important}
+  .product-modal-note{font-size:12px!important;margin-bottom:20px!important}
+  .product-modal-contact{min-height:50px!important;font-size:10px!important}
+}
+
+
+/* Fondo de la ficha: madera clara inspirada en las mesas del local */
+.product-modal-backdrop{
+  background:
+    linear-gradient(115deg,rgba(242,229,208,.90),rgba(225,205,175,.86) 48%,rgba(247,239,225,.91)),
+    repeating-linear-gradient(2deg,rgba(132,94,52,.10) 0,rgba(132,94,52,.10) 1px,transparent 1px,transparent 8px)!important;
+  backdrop-filter:blur(3px)!important;
+}
+
+
+/* Refuerzo visible del fondo exterior de la ventana de producto */
+#productModal .product-modal-backdrop{
+  background-color:#e6d2b2!important;
+  background-image:
+    linear-gradient(115deg,rgba(246,235,216,.78),rgba(213,187,150,.74) 48%,rgba(242,228,205,.82)),
+    repeating-linear-gradient(2deg,rgba(123,83,42,.16) 0,rgba(123,83,42,.16) 1px,transparent 1px,transparent 7px)!important;
+  opacity:1!important;
+  backdrop-filter:none!important;
+}
+
+
+/* Se revierte el último intento de aplicar madera al área de las fotos */
+
+
+/* Mismo color arena que la cinta catalog-marquee */
+.product-image-wrap{
+  background:#f5eee3!important;
+}
+.product-image-wrap .product-image{
+  background:#f5eee3!important;
+}
+
+
+/* Selector de talles para remeras oversize */
+.product-modal-size-picker{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  width:100%;
+  margin:4px 0 18px;
+  color:#171614;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.product-modal-size-picker[hidden]{display:none!important}
+.product-modal-size-picker select{
+  width:100%;
+  min-height:48px;
+  padding:0 14px;
+  border:1px solid #d8cfc2;
+  border-radius:0;
+  background:#f5eee3;
+  color:#171614;
+  font:600 13px "DM Sans",Arial,sans-serif;
+  letter-spacing:.02em;
+  outline-offset:3px;
+}
+.product-modal-size-picker.needs-size select{
+  border:2px solid #b84b3b;
+  background:#fff8f5;
+}
+
+
+/* Talles seleccionables directamente en cada tarjeta de remera */
+.product-size-options{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  flex-wrap:wrap;
+  margin:10px 0 13px;
+}
+.product-size-option{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:37px;
+  min-height:36px;
+  padding:0 8px;
+  border:1px solid #d8cfc2;
+  background:#fff;
+  color:#171614;
+  font:700 11px "DM Sans",Arial,sans-serif;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.product-size-option:hover,
+.product-size-option.active{
+  background:#171614;
+  color:#fff;
+  border-color:#171614;
+}
+.product-size-option:focus-visible{outline:2px solid #b84b3b;outline-offset:2px}
+.product-consult.needs-size{
+  outline:2px solid #b84b3b;
+  outline-offset:2px;
+}
